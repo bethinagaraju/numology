@@ -60,51 +60,51 @@ export function ToolDetail() {
   return (
     <>
       <PageIntro eyebrow="Numerology tool" title={meta.title} text={meta.description} />
-      <section className="tool-workspace section-shell">
-        <div className="tool-form">
-          <span className="eyebrow">{meta.placeholder}</span>
+      <section className="pb-[100px] grid grid-cols-[0.8fr_1.2fr] gap-[8%] max-md:grid-cols-1 max-md:gap-[35px] items-start max-w-[1240px] mx-auto px-[clamp(24px,5vw,80px)]">
+        <div className="bg-cream border border-gold p-[clamp(24px,4vw,52px)] flex flex-col">
+          <span className="block text-bronze uppercase tracking-[0.23em] text-[10px] leading-[1.5] mb-[20px]">{meta.placeholder}</span>
           {isDate ? (
-            <div className="date-inputs">
-              <label>Day
-                <input type="number" placeholder="14" value={values.one} onChange={(e) => setValues({ ...values, one: e.target.value })} />
+            <div className="flex gap-[14px] max-sm:gap-[8px]">
+              <label className="text-[10px] tracking-[0.18em] uppercase">Day
+                <input className="block border-0 border-b border-muted-gold w-full pt-[15px] pb-[11px] outline-none text-brown bg-transparent font-serif text-[30px] max-sm:text-[24px] focus:border-bronze" type="number" placeholder="14" value={values.one} onChange={(e) => setValues({ ...values, one: e.target.value })} />
               </label>
-              <label>Month
-                <input type="number" placeholder="08" value={values.two} onChange={(e) => setValues({ ...values, two: e.target.value })} />
+              <label className="text-[10px] tracking-[0.18em] uppercase">Month
+                <input className="block border-0 border-b border-muted-gold w-full pt-[15px] pb-[11px] outline-none text-brown bg-transparent font-serif text-[30px] max-sm:text-[24px] focus:border-bronze" type="number" placeholder="08" value={values.two} onChange={(e) => setValues({ ...values, two: e.target.value })} />
               </label>
-              <label>Year
-                <input type="number" placeholder="1998" value={values.three} onChange={(e) => setValues({ ...values, three: e.target.value })} />
+              <label className="text-[10px] tracking-[0.18em] uppercase">Year
+                <input className="block border-0 border-b border-muted-gold w-full pt-[15px] pb-[11px] outline-none text-brown bg-transparent font-serif text-[30px] max-sm:text-[24px] focus:border-bronze" type="number" placeholder="1998" value={values.three} onChange={(e) => setValues({ ...values, three: e.target.value })} />
               </label>
             </div>
           ) : (
-            <input className="wide-input" placeholder={meta.placeholder} value={values.one} onChange={(e) => setValues({ ...values, one: e.target.value })} />
+            <input className="block border-0 border-b border-muted-gold w-full pt-[15px] pb-[11px] mb-[30px] outline-none text-brown bg-transparent font-serif text-[30px] max-sm:text-[24px] focus:border-bronze" placeholder={meta.placeholder} value={values.one} onChange={(e) => setValues({ ...values, one: e.target.value })} />
           )}
-          <button className="button-dark" onClick={calculate}>Reveal my number <ArrowRight size={15} /></button>
-          <small>Calculations use the configurable Pythagorean system.</small>
+          <button className="inline-flex items-center justify-center gap-[12px] min-h-[48px] px-[21px] border border-transparent text-[10px] font-semibold tracking-[0.14em] uppercase transition-all duration-200 hover:-translate-y-[2px] bg-dark text-ivory mt-[32px]" onClick={calculate}>Reveal my number <ArrowRight size={15} /></button>
+          <small className="text-muted-gold text-[9px] mt-[20px] leading-[1.5] text-center">Calculations use the configurable Pythagorean system.</small>
         </div>
         {result && interpretation ? (
-          <motion.div className="tool-result" initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} aria-live="polite">
+          <motion.div className="bg-ivory border border-gold p-[clamp(24px,4vw,52px)] grid grid-cols-[130px_1fr] max-sm:grid-cols-1 gap-[40px] items-start" initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} aria-live="polite">
             <NumberRing number={result} label={meta.title} />
             <div>
-              <span className="eyebrow">Traditional interpretation</span>
-              <h2>{interpretation.title}</h2>
-              <p>{interpretation.summary}</p>
-              <div className="theme-tags">
+              <span className="block text-bronze uppercase tracking-[0.23em] text-[10px] leading-[1.5]">Traditional interpretation</span>
+              <h2 className="font-serif font-medium text-[48px] leading-none my-[15px] mb-[20px]">{interpretation.title}</h2>
+              <p className="text-[#765a40] text-[13px] leading-[1.7] mb-[30px]">{interpretation.summary}</p>
+              <div className="flex gap-[10px] flex-wrap mb-[40px]">
                 {interpretation.themes.map((theme) => (
-                  <span key={theme}>{theme}</span>
+                  <span className="border border-muted-gold rounded-[40px] py-[6px] px-[14px] text-[9px] tracking-[0.12em] uppercase text-bronze" key={theme}>{theme}</span>
                 ))}
               </div>
               <BookingButton label="Book a personal reading" />
             </div>
           </motion.div>
         ) : (
-          <div className="empty-result">
+          <div className="border border-dashed border-gold rounded-[12px] flex flex-col items-center justify-center h-full min-h-[350px] text-muted-gold">
             <Sparkles size={18} />
-            <p>Your result will appear here.</p>
+            <p className="mt-[15px] text-[11px]">Your result will appear here.</p>
           </div>
         )}
       </section>
-      <section className="section-shell tool-back">
-        <Link className="button-text" to="/numerology-tools"><ArrowLeft size={15} />Explore all tools</Link>
+      <section className="pb-[140px] max-w-[1240px] mx-auto px-[clamp(24px,5vw,80px)]">
+        <Link className="inline-flex items-center justify-center gap-[12px] text-[10px] font-semibold tracking-[0.14em] uppercase transition-all duration-200 hover:-translate-y-[2px] px-0 pb-[7px] border-b border-muted-gold text-brown" to="/numerology-tools"><ArrowLeft size={15} />Explore all tools</Link>
       </section>
     </>
   );

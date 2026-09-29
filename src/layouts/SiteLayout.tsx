@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { Navbar } from '@/components/Navbar';
@@ -16,13 +16,13 @@ import { Contact } from '@/pages/Contact';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
-  useMemo(() => window.scrollTo(0, 0), [pathname]);
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
   return null;
 }
 
 export function SiteLayout() {
   return (
-    <div className="site-shell">
+    <div className="overflow-hidden">
       <ScrollToTop />
       <Navbar />
       <main>

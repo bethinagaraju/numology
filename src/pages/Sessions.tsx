@@ -1,35 +1,35 @@
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import { PageIntro } from '@/components/PageIntro';
-import { FinalCta } from '@/components/FinalCta';
-import { BookingButton } from '@/components/BookingButton';
-import { packages, serviceTypes } from '@/data/siteData';
+import { packages } from '@/data/siteData';
 
 export function Sessions() {
   return (
     <>
-      <PageIntro eyebrow="Signature sessions" title="Choose your journey." text="Begin where your question is. Every session is designed as a thoughtful conversation around the numbers you bring." />
-      <section className="session-list section-shell">
-        {packages.map((item, i) => (
-          <article className="session-row" key={item.slug}>
-            <span className="session-number">0{i + 1}</span>
-            <div>
-              <span className="eyebrow">{i === 1 ? 'Most popular' : 'Signature session'}</span>
-              <h2>{item.title}</h2>
-              <p>{item.text}</p>
-            </div>
-            <strong>{item.price}</strong>
-            <BookingButton label="Choose package" variant="outline" />
-          </article>
-        ))}
-        {serviceTypes.map((title, i) => (
-          <article className="service-row" key={title}>
-            <span>0{i + 4}</span>
-            <h3>{title}</h3>
-            <p>A personal consultation for exploring this question through a traditional numerology lens.</p>
-            <BookingButton label="Request session" variant="text" />
-          </article>
-        ))}
+      <PageIntro 
+        eyebrow="Sessions" 
+        title="Personal alignment." 
+        text="A considered conversation, shaped around your questions." 
+      />
+      <section className="pb-[140px] max-w-[1240px] mx-auto px-[clamp(24px,5vw,80px)]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
+          {packages.map((pkg, i) => (
+            <Link 
+              key={pkg.slug}
+              to={`/sessions/${pkg.slug}`}
+              className="border border-gold p-[40px] transition-all duration-300 hover:bg-[rgba(242,231,213,0.4)] hover:-translate-y-[5px] flex flex-col"
+            >
+              <span className="text-bronze text-[10px] font-semibold mb-[20px]">0{i + 1}</span>
+              <h2 className="font-serif font-medium text-[32px] leading-none mb-[15px]">{pkg.title}</h2>
+              <p className="text-[#765a40] text-[13px] leading-[1.6] mb-[30px] flex-1">{pkg.text}</p>
+              <div className="flex items-center justify-between mt-auto">
+                <span className="font-serif text-[18px] text-bronze">{pkg.price}</span>
+                <b className="flex items-center gap-[8px] text-[10px] font-semibold uppercase tracking-[0.12em] text-bronze">Explore <ArrowRight size={14} /></b>
+              </div>
+            </Link>
+          ))}
+        </div>
       </section>
-      <FinalCta />
     </>
   );
 }
