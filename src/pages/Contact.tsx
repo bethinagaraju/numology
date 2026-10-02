@@ -32,7 +32,7 @@ export function Contact() {
         <div className="bg-cream border border-gold p-[40px] max-sm:px-[20px] max-sm:py-[30px]">
           <span className="text-bronze font-serif text-[50px] leading-[0.5] block mb-[20px]">∴</span>
           <h2 className="font-serif font-medium text-[42px] leading-[0.95] max-w-[240px]">There is no wrong place to begin.</h2>
-          <p className="text-[#765a40] text-[13px] my-[20px] mb-[35px] leading-[1.6]">Tell us what you are curious about, and select the session that feels right inside the client form.</p>
+          <p className="text-[#363637] text-[13px] my-[20px] mb-[35px] leading-[1.6]">Tell us what you are curious about, and select the session that feels right inside the client form.</p>
           <BookingButton label="Open client assessment form" />
         </div>
       </section>

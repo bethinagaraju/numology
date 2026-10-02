@@ -4,14 +4,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        ivory: '#FFFFF0',
-        cream: '#FCF5E5',
-        champagne: '#F1E9D2',
-        gold: '#CFB53B',
-        'muted-gold': '#B09A32',
-        bronze: '#8C7423',
-        brown: '#4B382A',
-        dark: '#362312',
+        background: '#FDFBF7',
+        ivory: '#FDFBF7',
+        'soft-ivory': '#FEFCF8',
+        terracotta: '#87533E',
+        gold: '#C5934D',
+        'secondary-gold': '#CDA66F',
+        'deep-charcoal': '#060606',
+        'dark-brown-charcoal': '#363637',
+        'warm-gray': '#363637',
+        'soft-gray': '#F2EFEB',
       },
       fontFamily: {
         sans: ['Manrope', 'sans-serif'],

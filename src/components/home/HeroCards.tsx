@@ -85,7 +85,7 @@ export function HeroCards() {
             bg-gradient-to-b from-[#3D2B1F] to-[#241710]
             shadow-[0_20px_50px_rgba(61,43,31,0.6),inset_0_2px_0_rgba(255,255,255,0.05)]
             border-[1.5px]
-            border-[#C5A059]/40
+            border-[#C5934D]/40
             p-[14px]
             flex
             items-center
@@ -101,7 +101,7 @@ export function HeroCards() {
               h-full
               rounded-[10px]
               border-[3px]
-              border-[#C5A059]/80
+              border-[#C5934D]/80
               relative
               overflow-hidden
               flex
@@ -129,36 +129,36 @@ export function HeroCards() {
                 ARCHITECTURAL GRID BORDERS
                 ================================================= */}
             {/* Horizontal Lines */}
-            <div className="absolute inset-x-2 top-4 border-t-[1.5px] border-[#C5A059]/40" />
-            <div className="absolute inset-x-2 bottom-4 border-b-[1.5px] border-[#C5A059]/40" />
+            <div className="absolute inset-x-2 top-4 border-t-[1.5px] border-[#C5934D]/40" />
+            <div className="absolute inset-x-2 bottom-4 border-b-[1.5px] border-[#C5934D]/40" />
 
             {/* Vertical Lines */}
-            <div className="absolute inset-y-2 left-4 border-l-[1.5px] border-[#C5A059]/40" />
-            <div className="absolute inset-y-2 right-4 border-r-[1.5px] border-[#C5A059]/40" />
+            <div className="absolute inset-y-2 left-4 border-l-[1.5px] border-[#C5934D]/40" />
+            <div className="absolute inset-y-2 right-4 border-r-[1.5px] border-[#C5934D]/40" />
 
             {/* =================================================
                 INTERSECTION DIAMONDS
                 ================================================= */}
-            <div className="absolute top-4 left-4 w-2 h-2 bg-[#C5A059] rotate-45 -translate-x-1/2 -translate-y-1/2 shadow-[0_0_6px_rgba(197,160,89,0.8)]" />
-            <div className="absolute top-4 right-4 w-2 h-2 bg-[#C5A059] rotate-45 translate-x-1/2 -translate-y-1/2 shadow-[0_0_6px_rgba(197,160,89,0.8)]" />
-            <div className="absolute bottom-4 left-4 w-2 h-2 bg-[#C5A059] rotate-45 -translate-x-1/2 translate-y-1/2 shadow-[0_0_6px_rgba(197,160,89,0.8)]" />
-            <div className="absolute bottom-4 right-4 w-2 h-2 bg-[#C5A059] rotate-45 translate-x-1/2 translate-y-1/2 shadow-[0_0_6px_rgba(197,160,89,0.8)]" />
+            <div className="absolute top-4 left-4 w-2 h-2 bg-[#C5934D] rotate-45 -translate-x-1/2 -translate-y-1/2 shadow-[0_0_6px_rgba(197,160,89,0.8)]" />
+            <div className="absolute top-4 right-4 w-2 h-2 bg-[#C5934D] rotate-45 translate-x-1/2 -translate-y-1/2 shadow-[0_0_6px_rgba(197,160,89,0.8)]" />
+            <div className="absolute bottom-4 left-4 w-2 h-2 bg-[#C5934D] rotate-45 -translate-x-1/2 translate-y-1/2 shadow-[0_0_6px_rgba(197,160,89,0.8)]" />
+            <div className="absolute bottom-4 right-4 w-2 h-2 bg-[#C5934D] rotate-45 translate-x-1/2 translate-y-1/2 shadow-[0_0_6px_rgba(197,160,89,0.8)]" />
 
             {/* =================================================
                 SUBTLE CENTER SPARKLES
                 ================================================= */}
-            <Sparkles className="absolute top-4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#C5A059]" size={14} />
-            <Sparkles className="absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-1/2 text-[#C5A059]" size={14} />
+            <Sparkles className="absolute top-4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#C5934D]" size={14} />
+            <Sparkles className="absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-1/2 text-[#C5934D]" size={14} />
 
             {/* =================================================
                 TOP TEXT
                 ================================================= */}
             {nextNum !== 0 && (
               <div className="absolute top-[36px] w-full flex flex-col items-center gap-1 z-20">
-                <span className="text-[#C5A059] text-[11px] font-serif tracking-[0.3em] uppercase text-center font-medium">
+                <span className="text-[#C5934D] text-[11px] font-serif tracking-[0.3em] uppercase text-center font-medium">
                   The Golden Numeralist
                 </span>
-                <div className="w-24 h-[1px] bg-[#C5A059]/40 mt-1" />
+                <div className="w-24 h-[1px] bg-[#C5934D]/40 mt-1" />
               </div>
             )}
 
@@ -190,14 +190,14 @@ export function HeroCards() {
                 BOTTOM TEXT
                 ================================================= */}
             <div className="absolute bottom-[40px] w-full flex flex-col items-center gap-[6px] z-20">
-              <div className="w-28 h-[1px] bg-[#C5A059]/40 mb-1" />
-              <span className="text-[#C5A059] text-[16px] font-serif tracking-[0.25em] uppercase text-center font-medium">
+              <div className="w-28 h-[1px] bg-[#C5934D]/40 mb-1" />
+              <span className="text-[#C5934D] text-[16px] font-serif tracking-[0.25em] uppercase text-center font-medium">
                 {numberData[nextNum].title}
               </span>
-              <span className="text-[#C5A059]/80 text-[9px] font-sans tracking-[0.35em] uppercase text-center">
+              <span className="text-[#C5934D]/80 text-[9px] font-sans tracking-[0.35em] uppercase text-center">
                 {numberData[nextNum].subtitle}
               </span>
-              <span className="text-[#C5A059]/70 text-[10px] font-serif tracking-[0.25em] mt-1 text-center">
+              <span className="text-[#C5934D]/70 text-[10px] font-serif tracking-[0.25em] mt-1 text-center">
                 {numberData[nextNum].dates}
               </span>
             </div>
@@ -246,7 +246,7 @@ export function HeroCards() {
             bg-gradient-to-b from-[#3D2B1F] to-[#241710]
             shadow-[0_25px_60px_rgba(61,43,31,0.7),inset_0_2px_0_rgba(255,255,255,0.05)]
             border-[1.5px]
-            border-[#C5A059]/40
+            border-[#C5934D]/40
             p-[14px]
             flex
             items-center
@@ -263,7 +263,7 @@ export function HeroCards() {
               h-full
               rounded-[10px]
               border-[3px]
-              border-[#C5A059]/80
+              border-[#C5934D]/80
               relative
               overflow-hidden
               flex
@@ -290,36 +290,36 @@ export function HeroCards() {
                 ARCHITECTURAL GRID BORDERS
                 ================================================= */}
             {/* Horizontal Lines */}
-            <div className="absolute inset-x-2 top-4 border-t-[1.5px] border-[#C5A059]/40" />
-            <div className="absolute inset-x-2 bottom-4 border-b-[1.5px] border-[#C5A059]/40" />
+            <div className="absolute inset-x-2 top-4 border-t-[1.5px] border-[#C5934D]/40" />
+            <div className="absolute inset-x-2 bottom-4 border-b-[1.5px] border-[#C5934D]/40" />
 
             {/* Vertical Lines */}
-            <div className="absolute inset-y-2 left-4 border-l-[1.5px] border-[#C5A059]/40" />
-            <div className="absolute inset-y-2 right-4 border-r-[1.5px] border-[#C5A059]/40" />
+            <div className="absolute inset-y-2 left-4 border-l-[1.5px] border-[#C5934D]/40" />
+            <div className="absolute inset-y-2 right-4 border-r-[1.5px] border-[#C5934D]/40" />
 
             {/* =================================================
                 INTERSECTION DIAMONDS
                 ================================================= */}
-            <div className="absolute top-4 left-4 w-2 h-2 bg-[#C5A059] rotate-45 -translate-x-1/2 -translate-y-1/2 shadow-[0_0_6px_rgba(197,160,89,0.8)]" />
-            <div className="absolute top-4 right-4 w-2 h-2 bg-[#C5A059] rotate-45 translate-x-1/2 -translate-y-1/2 shadow-[0_0_6px_rgba(197,160,89,0.8)]" />
-            <div className="absolute bottom-4 left-4 w-2 h-2 bg-[#C5A059] rotate-45 -translate-x-1/2 translate-y-1/2 shadow-[0_0_6px_rgba(197,160,89,0.8)]" />
-            <div className="absolute bottom-4 right-4 w-2 h-2 bg-[#C5A059] rotate-45 translate-x-1/2 translate-y-1/2 shadow-[0_0_6px_rgba(197,160,89,0.8)]" />
+            <div className="absolute top-4 left-4 w-2 h-2 bg-[#C5934D] rotate-45 -translate-x-1/2 -translate-y-1/2 shadow-[0_0_6px_rgba(197,160,89,0.8)]" />
+            <div className="absolute top-4 right-4 w-2 h-2 bg-[#C5934D] rotate-45 translate-x-1/2 -translate-y-1/2 shadow-[0_0_6px_rgba(197,160,89,0.8)]" />
+            <div className="absolute bottom-4 left-4 w-2 h-2 bg-[#C5934D] rotate-45 -translate-x-1/2 translate-y-1/2 shadow-[0_0_6px_rgba(197,160,89,0.8)]" />
+            <div className="absolute bottom-4 right-4 w-2 h-2 bg-[#C5934D] rotate-45 translate-x-1/2 translate-y-1/2 shadow-[0_0_6px_rgba(197,160,89,0.8)]" />
 
             {/* =================================================
                 SUBTLE CENTER SPARKLES
                 ================================================= */}
-            <Sparkles className="absolute top-4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#C5A059]" size={14} />
-            <Sparkles className="absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-1/2 text-[#C5A059]" size={14} />
+            <Sparkles className="absolute top-4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#C5934D]" size={14} />
+            <Sparkles className="absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-1/2 text-[#C5934D]" size={14} />
 
             {/* =================================================
                 TOP TEXT
                 ================================================= */}
             {num !== 0 && (
               <div className="absolute top-[36px] w-full flex flex-col items-center gap-1 z-20">
-                <span className="text-[#C5A059] text-[11px] font-serif tracking-[0.3em] uppercase text-center font-medium">
+                <span className="text-[#C5934D] text-[11px] font-serif tracking-[0.3em] uppercase text-center font-medium">
                   The Golden Numeralist
                 </span>
-                <div className="w-24 h-[1px] bg-[#C5A059]/40 mt-1" />
+                <div className="w-24 h-[1px] bg-[#C5934D]/40 mt-1" />
               </div>
             )}
 
@@ -351,14 +351,14 @@ export function HeroCards() {
                 BOTTOM TEXT
                 ================================================= */}
             <div className="absolute bottom-[40px] w-full flex flex-col items-center gap-[6px] z-20">
-              <div className="w-28 h-[1px] bg-[#C5A059]/40 mb-1" />
-              <span className="text-[#C5A059] text-[16px] font-serif tracking-[0.25em] uppercase text-center font-medium">
+              <div className="w-28 h-[1px] bg-[#C5934D]/40 mb-1" />
+              <span className="text-[#C5934D] text-[16px] font-serif tracking-[0.25em] uppercase text-center font-medium">
                 {numberData[num].title}
               </span>
-              <span className="text-[#C5A059]/80 text-[9px] font-sans tracking-[0.35em] uppercase text-center">
+              <span className="text-[#C5934D]/80 text-[9px] font-sans tracking-[0.35em] uppercase text-center">
                 {numberData[num].subtitle}
               </span>
-              <span className="text-[#C5A059]/70 text-[10px] font-serif tracking-[0.25em] mt-1 text-center">
+              <span className="text-[#C5934D]/70 text-[10px] font-serif tracking-[0.25em] mt-1 text-center">
                 {numberData[num].dates}
               </span>
             </div>

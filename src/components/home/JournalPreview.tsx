@@ -13,7 +13,7 @@ export function JournalPreview() {
             <span className="text-bronze text-[10px]">0{i + 1}</span>
             <small className="block text-muted-gold uppercase tracking-[0.12em] text-[8px] mt-[50px]">{article.cat}</small>
             <h3 className="font-serif font-medium text-[31px] leading-[0.95] my-[14px]">{article.title}</h3>
-            <p className="text-[#765a40] text-[11px] leading-[1.7]">A quiet introduction to one of the questions that brings people to numerology.</p>
+            <p className="text-[#363637] text-[11px] leading-[1.7]">A quiet introduction to one of the questions that brings people to numerology.</p>
             <ArrowRight className="text-bronze mt-[16px]" size={15} />
           </Link>
         ))}

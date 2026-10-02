@@ -16,7 +16,7 @@ export function About() {
         <div>
           <SectionHeading eyebrow="Namrattaa Lal" title="The person behind the numbers." text="Biography, experience and certifications can be replaced here with the consultant's final approved profile." />
           <OrnamentalDivider />
-          <div className="my-[25px] mb-[45px] [&_p]:text-[#765a40] [&_p]:text-[13px] [&_p]:leading-[1.75] [&_p]:mb-[24px] [&_p]:max-w-[520px]">
+          <div className="my-[25px] mb-[45px] [&_p]:text-[#363637] [&_p]:text-[13px] [&_p]:leading-[1.75] [&_p]:mb-[24px] [&_p]:max-w-[520px]">
             <p>Numerology has long been used as a symbolic language for self-reflection. This practice approaches it with warmth and care, holding each interpretation as an invitation rather than a fixed answer.</p>
             <p>Every consultation is shaped around the person in front of the numbers — their question, their context and the perspective they are seeking.</p>
           </div>
@@ -30,7 +30,7 @@ export function About() {
             <div key={value}>
               <span className="text-bronze text-[10px] tracking-[0.15em]">0{i + 1}</span>
               <h3 className="font-serif font-medium text-[26px] leading-[1.1] my-[18px] mb-[14px]">{value}</h3>
-              <p className="text-[#765a40] text-[11px] max-w-[250px] mx-auto my-0 leading-[1.6]">A grounded, human way to explore the questions behind your numbers.</p>
+              <p className="text-[#363637] text-[11px] max-w-[250px] mx-auto my-0 leading-[1.6]">A grounded, human way to explore the questions behind your numbers.</p>
             </div>
           ))}
         </div>

@@ -18,8 +18,8 @@
     body {
         margin: 0;
         min-width: 320px;
-        background: #FFFFF0;
-        color: #362312;
+        background: #FDFBF7;
+        color: #363637;
     }
 
     body::before {

@@ -24,7 +24,7 @@ export function SessionDetail() {
       <PageIntro eyebrow="Session Detail" title={pkg.title} text={pkg.text} />
       <section className="pb-[140px] max-w-[800px] mx-auto px-[clamp(24px,5vw,80px)]">
         <div className="mb-[60px]">
-          <Link to="/sessions" className="text-bronze uppercase text-[10px] font-semibold tracking-[0.12em] inline-flex items-center gap-[8px] hover:text-[#765a40] transition-colors">
+          <Link to="/sessions" className="text-bronze uppercase text-[10px] font-semibold tracking-[0.12em] inline-flex items-center gap-[8px] hover:text-[#363637] transition-colors">
             <ArrowLeft size={14} /> Back to Sessions
           </Link>
         </div>
@@ -34,7 +34,7 @@ export function SessionDetail() {
           {details && (
             <ul className="mb-[40px] space-y-[15px]">
               {details.items.map((item, i) => (
-                <li key={i} className="flex items-start gap-[15px] text-[#765a40] text-[15px] leading-[1.6]">
+                <li key={i} className="flex items-start gap-[15px] text-[#363637] text-[15px] leading-[1.6]">
                   <span className="text-bronze mt-[4px]">✦</span> {item}
                 </li>
               ))}

@@ -14,7 +14,7 @@ export function Journal() {
             <div className="flex-1 max-w-[680px]">
               <small className="text-muted-gold uppercase tracking-[0.12em] text-[9px]">{article.category}</small>
               <h2 className="font-serif font-medium text-[42px] leading-none my-[15px] max-sm:text-[34px]">{article.title}</h2>
-              <p className="text-[#765a40] text-[13px] m-0 leading-[1.6]">{article.text}</p>
+              <p className="text-[#363637] text-[13px] m-0 leading-[1.6]">{article.text}</p>
             </div>
             <ArrowRight className="text-bronze transition-transform duration-300 group-hover:translate-x-[10px]" size={16} />
           </Link>

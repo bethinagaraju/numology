@@ -33,7 +33,7 @@ export function NumerologyMap() {
         <div className="border-l border-gold pl-[48px] max-md:mt-[15px] max-sm:pl-[25px]">
           <span className="block text-bronze uppercase tracking-[0.23em] text-[10px] leading-[1.5]">{selectedMap.label}</span>
           <h3 className="font-serif font-medium text-[44px] leading-[0.95] my-[17px]">{selectedMap.text.split('.')[0]}.</h3>
-          <p className="max-w-[380px] text-[#765a40] text-[13px]">{selectedMap.text}</p>
+          <p className="max-w-[380px] text-[#363637] text-[13px]">{selectedMap.text}</p>
           <dl className="border-t border-gold my-[30px]">
             <div className="flex justify-between border-b border-gold py-[15px] gap-[20px]"><dt className="text-muted-gold text-[10px] uppercase tracking-[0.1em]">Traditionally calculated from</dt><dd className="m-0 text-[11px] text-right">{selectedMap.calc}</dd></div>
             <div className="flex justify-between border-b border-gold py-[15px] gap-[20px]"><dt className="text-muted-gold text-[10px] uppercase tracking-[0.1em]">Relevant consultation</dt><dd className="m-0 text-[11px] text-right">{selectedMap.session}</dd></div>
