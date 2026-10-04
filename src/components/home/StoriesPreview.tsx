@@ -628,45 +628,45 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const reviews = [
   {
-    text: "A beautiful space to slow down, ask better questions and see familiar patterns from a different angle.",
-    author: "Elena R.",
-    type: "Personal Numerology"
+    text: "An incredibly insightful session. Namrattaa explained the numbers clearly with real-life examples and helped me understand my personality, strengths, and areas for growth.",
+    author: "Ashis",
+    // type: "Personal Numerology"
   },
   {
-    text: "It gave me the clarity I was looking for during a difficult transition period in my career.",
-    author: "James T.",
-    type: "Career Reading"
+    text: "A wonderful and meaningful session. Namrattaa explained everything with great clarity and helped me understand myself on a much deeper level.",
+    author: "Anonymous Client",
+    // type: "Career Reading"
   },
   {
-    text: "The insights provided were startlingly accurate. I finally understand the recurring themes in my life.",
-    author: "Sarah M.",
-    type: "Life Path Analysis"
+    text: "An insightful and detailed session that gave me a better understanding of my strengths and areas for improvement. The guidance and remedies were simple and practical.",
+    author: "Rinki Mitra",
+    // type: "Life Path Analysis"
   },
   {
-    text: "Changing the vibration of my name shifted my entire perspective. A truly transformative process.",
-    author: "Michael K.",
-    type: "Name Numerology"
+    text: "A very insightful and positive experience. Namrattaa was patient, professional, and explained the guidance clearly, giving me plenty to reflect on.",
+    author: "Anonymous Client",
+    // type: "Name Numerology"
   },
   {
-    text: "I was skeptical at first, but the Lo Shu Grid reading highlighted strengths I didn't even realize I had.",
-    author: "Priya S.",
-    type: "Lo Shu Grid Analysis"
+    text: "Thank you so much for your guidance Namrattaa Lal. I can actually relate many of your readings to my own thinking, feelings and life, so guidance like this would help one realize what is actually meant for them. It gives a good guidance on one's qualities and how they can learn and move forward. My heart feels light thank you so much Namrattaa Lal And yes I have noted on some active steps you have given me to move better and will do it!",
+    author: "Kaveri",
+    // type: "Lo Shu Grid Analysis"
   },
   {
-    text: "Such a calming and validating session. It felt like someone finally handed me the map to my own life.",
-    author: "David L.",
-    type: "Comprehensive Report"
+    text: "Did a wonderful Numerology session with Namrattaa Lal ❤️ Was quite amazed by your knowledge",
+    author: "Kanika",
+    // type: "Comprehensive Report"
   },
-  {
-    text: "The remedies suggested were simple yet profound. I've noticed a real shift in my daily energy.",
-    author: "Anita V.",
-    type: "Remedies & Guidance"
-  },
-  {
-    text: "Understanding my personal year number helped me stop fighting against the current and start flowing.",
-    author: "Marcus J.",
-    type: "Yearly Forecast"
-  }
+  // {
+  //   text: "The remedies suggested were simple yet profound. I've noticed a real shift in my daily energy.",
+  //   author: "Anita V.",
+  //   // type: "Remedies & Guidance"
+  // },
+  // {
+  //   text: "Understanding my personal year number helped me stop fighting against the current and start flowing.",
+  //   author: "Marcus J.",
+  //   // type: "Yearly Forecast"
+  // }
 ];
 
 export function StoriesPreview() {

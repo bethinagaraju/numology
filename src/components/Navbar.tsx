@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { BookingButton } from './BookingButton';
 import { navItems } from '@/data/siteData';
-import logoImg from '@/assets/logo.png';
+import logoImg from '@/assets/ChatGPT Image Oct 4, 2026, 02_58_43 PM.png';
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
