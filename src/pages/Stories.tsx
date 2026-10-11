@@ -553,7 +553,7 @@ export function Stories() {
             {/* Decorative quote */}
 
             <div
-              className="
+              className=" 
                 pointer-events-none
                 absolute
                 left-8
@@ -583,17 +583,21 @@ export function Stories() {
                   max-w-[920px]
                   text-center
                   font-serif
-                  text-[25px]
+                  text-2xl
                   italic
                   leading-[1.65]
                   text-[#373535]
-                  md:text-[34px]
-                  lg:text-[39px]
+                  md:text-2xl
+                  lg:text-3xl
                 "
               >
-                “An incredibly insightful experience. Namrattaa explained each
-                number with great clarity and helped me understand how they
-                connect with my personality, strengths and life journey.”
+                “I had a wonderful experience with the numerologist Namratta.
+                The consultation was very insightful, detailed, and positive.
+                I truly appreciated the time, patience, and professionalism
+                throughout the session. The guidance was explained clearly and
+                gave me a lot to think about. Thank you for such a pleasant
+                experience and excellent service. I would definitely recommend
+                your service to others!”
               </blockquote>
 
               {/* Divider */}
@@ -609,78 +613,17 @@ export function Stories() {
               <div className="text-center">
 
                 <h3 className="font-serif text-2xl text-[#87533E]">
-                  Ashis
+                  Rinki Mitra
                 </h3>
-
-                <p className="mt-2 text-[9px] uppercase tracking-[0.35em] text-[#A98243]">
-                  Numerology Session
-                </p>
 
               </div>
 
             </div>
           </motion.article>
 
-          {/* ========================================================
-              TRUST STRIP
-          ======================================================== */}
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col items-center justify-center gap-4 py-14 md:flex-row md:gap-10"
-          >
 
-            <div className="flex items-center gap-2">
-              <GoldStars />
-              <span className="ml-2 text-xs uppercase tracking-[0.15em] text-[#87533E]">
-                Client Experiences
-              </span>
-            </div>
-
-            <span className="hidden h-4 w-px bg-[#CDA66F]/50 md:block" />
-
-            <p className="text-center font-serif text-sm italic text-[#373535]/60">
-              “A journey toward deeper self-understanding.”
-            </p>
-
-          </motion.div>
-
-          {/* ========================================================
-              SECTION TITLE
-          ======================================================== */}
-
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="mb-12 text-center"
-          >
-
-            <p className="mb-4 text-[10px] uppercase tracking-[0.35em] text-[#A98243]">
-              From Our Clients
-            </p>
-
-            <h2 className="font-serif text-3xl text-[#373535] md:text-5xl">
-              Stories of Insight &amp; Transformation
-            </h2>
-
-            <div className="mx-auto mt-6 flex items-center justify-center gap-3">
-              <span className="h-px w-14 bg-[#CDA66F]/40" />
-              <span className="text-[#C5934D]">✦</span>
-              <span className="h-px w-14 bg-[#CDA66F]/40" />
-            </div>
-
-          </motion.div>
-
-          {/* ========================================================
-              CAROUSEL
-          ======================================================== */}
-
-          <div className="relative">
+          <div className="relative pt-16">
 
             <div
               ref={scrollRef}
@@ -970,10 +913,9 @@ export function Stories() {
                   p-10
                   text-center
                   md:p-12
-                  ${
-                    index !== 2
-                      ? "border-b border-[#CDA66F]/25 md:border-b-0 md:border-r"
-                      : ""
+                  ${index !== 2
+                    ? "border-b border-[#CDA66F]/25 md:border-b-0 md:border-r"
+                    : ""
                   }
                 `}
               >

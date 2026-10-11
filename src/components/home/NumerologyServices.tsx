@@ -913,54 +913,55 @@ import {
   ArrowUpRight,
   Sparkles,
   BriefcaseBusiness,
-  Heart,
-  Grid3X3,
+  HeartHandshake,
+  Users,
   WandSparkles,
-  ScrollText,
+  CalendarDays,
 } from "lucide-react";
+import { GOOGLE_FORM_URL } from "@/components/BookingButton";
 
 const services = [
   {
     number: "01",
-    title: "Personal Numerology",
+    title: "Personality & Destiny",
     description:
-      "Understand your core numbers, personality, destiny and the patterns that shape your personal journey.",
+      "Understand your core Driver and Conductor numbers to uncover innate traits, life purpose, and the destiny patterns shaping your life journey.",
     icon: Sparkles,
   },
   {
     number: "02",
-    title: "Career & Business Numerology",
+    title: "Career & Business",
     description:
-      "Explore numerology insights related to career direction, professional strengths and business suitability.",
+      "Explore numerology insights for career direction, professional strengths, business name alignment, and financial growth.",
     icon: BriefcaseBusiness,
   },
   {
     number: "03",
-    title: "Name Numerology",
+    title: "Marriage Compatibility",
     description:
-      "Analyze the numerical vibration of your name and explore possible name adjustments.",
-    icon: WandSparkles,
+      "Evaluate the energetic alignment and vibrational harmony between partners to foster deep mutual understanding and long-term companionship.",
+    icon: HeartHandshake,
   },
   {
     number: "04",
-    title: "Lo Shu Grid Analysis",
+    title: "Family & Relationships",
     description:
-      "Understand the numbers present and missing in your Lo Shu Grid and the patterns they represent.",
-    icon: Grid3X3,
+      "Gain clarity on family dynamics, parent-child compatibility, and relationship patterns to nurture peace and emotional harmony.",
+    icon: Users,
   },
   {
     number: "05",
-    title: "Remedies & Guidance",
+    title: "Name Analysis",
     description:
-      "Receive personalized suggestions based on your numerology analysis and missing numbers.",
-    icon: Heart,
+      "Analyze the numerical vibration of your name and explore optimal spelling adjustments to harmonize with your core numbers.",
+    icon: WandSparkles,
   },
   {
     number: "06",
-    title: "Comprehensive Numerology Report",
+    title: "Upcoming Personal Year",
     description:
-      "A detailed personalized report bringing together your core numbers, combinations, career and business insights, Lo Shu Grid, name analysis, remedies and final guidance.",
-    icon: ScrollText,
+      "Discover the cosmic vibrations, opportunities, transit themes, and guidance for your personal year to make confident, well-timed decisions.",
+    icon: CalendarDays,
   },
 ];
 
@@ -1449,48 +1450,7 @@ export default function NumerologyServices() {
                       CARD CTA
                       ================================================= */}
 
-                  <div
-                    className="
-                      mt-auto
-                      pt-10
-                    "
-                  >
-                    <button
-                      className="
-                        group/link
-                        inline-flex
-                        items-center
-                        gap-3
-                        border-b
-                        border-[#87533E]
-                        pb-2
-                        text-[10px]
-                        font-semibold
-                        uppercase
-                        tracking-[0.20em]
-                        text-[#956755]
-                        transition-colors
-                        duration-300
-                        hover:text-[#c4924d]
-                        hover:border-[#c4924d]
-                      "
-                    >
-                      Explore
 
-                      <ArrowUpRight
-                        size={14}
-                        strokeWidth={1.5}
-                        className="
-                          text-[#87533E]
-                          transition-transform
-                          duration-300
-                          group-hover/link:text-[#c4924d]
-                          group-hover/link:translate-x-1
-                          group-hover/link:-translate-y-1
-                        "
-                      />
-                    </button>
-                  </div>
 
                   {/* =================================================
                       DECORATIVE CORNER
@@ -1575,7 +1535,9 @@ export default function NumerologyServices() {
           </p>
 
           <a
-            href="#booking"
+            href={GOOGLE_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="
               group
               inline-flex

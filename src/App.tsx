@@ -1,11 +1,11 @@
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { SiteLayout } from '@/layouts/SiteLayout';
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <SiteLayout />
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

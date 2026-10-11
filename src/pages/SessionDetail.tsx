@@ -1,54 +1,156 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams, useLocation, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { PageIntro } from '@/components/PageIntro';
-import { packages, packageData } from '@/data/siteData';
+import { BookingButton } from '@/components/BookingButton';
+
+// Animation variants for smooth luxury staggered entrance
+const listContainerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.06,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const listItemVariants = {
+  hidden: { opacity: 0, x: -14, y: 4 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: {
+      duration: 0.45,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
+// ============================================================================
+// EDIT SESSION PACKAGES CONTENT DIRECTLY HERE
+// You can easily modify titles, prices, descriptions, and included items below.
+// ============================================================================
+
+export interface SessionPackage {
+  slug: string;
+  title: string;
+  price: string;
+  text: string;
+  focus?: string;
+  items: string[];
+}
+
+export const sessionPackages: Record<string, SessionPackage> = {
+  'basic-package': {
+    slug: 'basic-package',
+    title: 'Basic Package',
+    price: 'AED 150',
+    text: 'A focused beginning for exploring your core numerology foundations.',
+    focus: 'Core Foundations',
+    items: [
+      'Life Path Number – Core Life Purpose',
+      'Destiny Number – Latent Talents',
+      'Current Personal Year Forecast',
+      'Basic Remedies',
+    ],
+  },
+  'detailed-package': {
+    slug: 'detailed-package',
+    title: 'Detailed Package',
+    price: 'AED 300',
+    text: 'A deeper conversation across the essential pillars of your personal map.',
+    focus: 'Essential Life Pillars',
+    items: [
+      'Life Path Number – Core Life Purpose',
+      'Destiny Number – Latent Talents',
+      'Current Personal Year Forecast',
+      'Life Path Number – Core Life Purpose',
+      'Destiny Number – Latent Talents',
+      'Current Personal Year Forecast',
+      'Career & Financial Outlook',
+      'Yogas in Numerology',
+      'Key Health Concerns',
+      'Advanced Remedies',
+    ],
+  },
+  'comprehensive-package': {
+    slug: 'comprehensive-package',
+    title: 'Comprehensive Package',
+    price: 'AED 500',
+    text: 'A complete alignment session for a fuller, more considered perspective.',
+    focus: 'Complete Personal Alignment',
+    items: [
+      'Life Path Number – Core Life Purpose',
+      'Destiny Number – Latent Talents',
+      'Current Personal Year Forecast',
+      'Life Path Number – Core Life Purpose',
+      'Destiny Number – Latent Talents',
+      'Current Personal Year Forecast',
+      'Career & Financial Outlook',
+      'Yogas in Numerology',
+      'Key Health Concerns',
+      'Advanced Remedies',
+      'Complete Name Spelling Analysis & Correction',
+      'Marriage Compatibility',
+      'Mobile & Vehicle Number Compatibility',
+    ],
+  },
+};
 
 export function SessionDetail() {
-  const { slug } = useParams<{ slug: string }>();
-  const pkg = packages.find(p => p.slug === slug);
-  const details = packageData.find(d => d.name.toLowerCase() === pkg?.title.toLowerCase());
+  const { slug: paramSlug } = useParams<{ slug: string }>();
+  const location = useLocation();
 
-  if (!pkg) {
-    return (
-      <div className="pt-[205px] px-[clamp(24px,9vw,145px)] pb-[100px] text-center">
-        <h1 className="font-serif text-[40px] mb-[20px]">Session not found</h1>
-        <Link to="/sessions" className="text-bronze uppercase text-[12px] tracking-widest inline-flex items-center gap-2">
-          <ArrowLeft size={16} /> Back to Sessions
-        </Link>
-      </div>
-    );
-  }
+  // Support /sessions/:slug, /:slug, and direct slug lookups
+  const pathParts = location.pathname.split('/').filter(Boolean);
+  const pathSlug = pathParts[pathParts.length - 1];
+  const slug = paramSlug || pathSlug || 'detailed-package';
+
+  const pkg = sessionPackages[slug] || sessionPackages['detailed-package'];
 
   return (
     <>
       <PageIntro eyebrow="Session Detail" title={pkg.title} text={pkg.text} />
       <section className="pb-[140px] max-w-[800px] mx-auto px-[clamp(24px,5vw,80px)]">
         <div className="mb-[60px]">
-          <Link to="/sessions" className="text-bronze uppercase text-[10px] font-semibold tracking-[0.12em] inline-flex items-center gap-[8px] hover:text-[#363637] transition-colors">
+          <Link
+            to="/sessions"
+            className="text-bronze uppercase text-[10px] font-semibold tracking-[0.12em] inline-flex items-center gap-[8px] hover:text-[#363637] transition-colors"
+          >
             <ArrowLeft size={14} /> Back to Sessions
           </Link>
         </div>
-        
-        <div className="border border-gold p-[40px] md:p-[60px]">
-          <h2 className="font-serif text-[32px] mb-[20px]">What is included</h2>
-          {details && (
-            <ul className="mb-[40px] space-y-[15px]">
-              {details.items.map((item, i) => (
-                <li key={i} className="flex items-start gap-[15px] text-[#363637] text-[15px] leading-[1.6]">
-                  <span className="text-bronze mt-[4px]">✦</span> {item}
-                </li>
-              ))}
-            </ul>
-          )}
-          
-          <div className="pt-[40px] border-t border-muted-gold flex flex-col sm:flex-row sm:items-center justify-between gap-[20px]">
-            <div>
-              <span className="block text-[11px] uppercase tracking-widest text-bronze mb-[5px]">Investment</span>
-              <span className="font-serif text-[28px]">{pkg.price}</span>
-            </div>
-            <Link to="/contact" className="inline-flex items-center justify-center h-[50px] px-[30px] bg-[#1a1a1a] text-[#f2e7d5] uppercase text-[10px] tracking-[0.2em] hover:bg-[#333] transition-colors">
-              Book this session
-            </Link>
+
+        <div className="border border-gold p-[40px] md:p-[60px] bg-[#FEFCF8]">
+          <h2 className="font-serif text-[32px] mb-[20px] text-[#363637]">What is included</h2>
+          <motion.ul
+            key={slug}
+            variants={listContainerVariants}
+            initial="hidden"
+            animate="visible"
+            className="mb-[40px] space-y-[15px]"
+          >
+            {pkg.items.map((item, i) => (
+              <motion.li
+                key={i}
+                variants={listItemVariants}
+                whileHover={{ x: 6 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+                className="group flex items-center gap-[15px] text-[#363637] text-[15px] leading-[1.6] cursor-default transition-colors hover:text-[#2B211B]"
+              >
+                <span className="text-bronze shrink-0 leading-none transition-transform duration-300 group-hover:scale-125 group-hover:rotate-45 group-hover:text-[#A98243]">
+                  ✦
+                </span>
+                <span>{item}</span>
+              </motion.li>
+            ))}
+          </motion.ul>
+
+          <div className="pt-[40px] border-t border-muted-gold flex items-center justify-end">
+            <BookingButton label="Book this session" />
           </div>
         </div>
       </section>

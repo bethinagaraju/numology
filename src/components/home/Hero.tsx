@@ -1,223 +1,3 @@
-// import { Sparkles, CircleDashed } from 'lucide-react';
-// import { Link } from 'react-router-dom';
-// import { HeroCards } from './HeroCards';
-
-// export function Hero() {
-//   return (
-//     <section
-//       className="
-//         relative
-//         min-h-[720px]
-//         overflow-hidden
-//         bg-gradient-to-br from-ivory to-cream
-//         px-[clamp(24px,6vw,80px)]
-//         py-[100px]
-//         flex
-//         items-center
-//         max-md:min-h-[900px]
-//         max-md:py-[130px]
-//         max-md:items-start
-//       "
-//     >
-//       {/* Background Subtle Wheel Element */}
-//       <div className="absolute right-[-20%] top-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border-[1px] border-[#E8E2D9] pointer-events-none flex items-center justify-center opacity-40">
-//         <div className="w-[85%] h-[85%] rounded-full border-[1px] border-dashed border-[#E8E2D9] flex items-center justify-center">
-//           <div className="w-[70%] h-[70%] rounded-full border-[1px] border-[#E8E2D9]" />
-//         </div>
-//       </div>
-
-//       <div
-//         className="
-//           relative
-//           z-10
-//           w-full
-//           max-w-[1240px]
-//           mx-auto
-//           grid
-//           grid-cols-[1fr_1fr]
-//           items-center
-//           gap-10
-//           max-md:grid-cols-1
-//         "
-//       >
-//         {/* =======================================================
-//             LEFT CONTENT
-//             ======================================================= */}
-//         {/* =======================================================
-//             LEFT CONTENT
-//             ======================================================= */}
-//         <div className="relative z-20 max-w-[640px] pt-4 md:pt-8">
-//           {/* Small pill */}
-//           {/* <div
-//             className="
-//               inline-flex
-//               items-center
-//               gap-[9px]
-//               px-[15px]
-//               py-[6px]
-//               rounded-full
-//               bg-[#FAF6F0]/90
-//               border
-//               border-[#DEC9A6]
-//               text-[#5A4532]
-//               text-[12px]
-//               font-medium
-//               tracking-wide
-//               shadow-[0_2px_8px_rgba(206,177,130,0.12)]
-//               mb-[22px]
-//             "
-//           >
-//             <svg
-//               width="12"
-//               height="12"
-//               viewBox="0 0 24 24"
-//               fill="#C49B45"
-//               className="shrink-0"
-//             >
-//               <path d="M12 0 C12 7.5 16.5 12 24 12 C16.5 12 12 16.5 12 24 C12 16.5 7.5 12 0 12 C7.5 12 12 7.5 12 0 Z" />
-//             </svg>
-//             Personalized Numerology Experience
-//           </div> */}
-
-//           {/* Branded Title Lockup */}
-//           <div className="flex flex-col items-start mb-6">
-//             {/* Top Ornamental Divider */}
-//             <div className="flex items-center gap-3 w-full max-w-[360px] my-1.5 opacity-90">
-//               <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-[#CDA66F]/60 to-[#C5934D]" />
-//               <div className="flex items-center gap-1.5 text-[#C5934D]">
-//                 <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-//                   <path d="M12 0 C12 7.5 16.5 12 24 12 C16.5 12 12 16.5 12 24 C12 16.5 7.5 12 0 12 C7.5 12 12 7.5 12 0 Z" />
-//                 </svg>
-//                 <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-//                   <path d="M12 0 C12 7.5 16.5 12 24 12 C16.5 12 12 16.5 12 24 C12 16.5 7.5 12 0 12 C7.5 12 12 7.5 12 0 Z" />
-//                 </svg>
-//               </div>
-//               <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-[#CDA66F]/60 to-[#C5934D]" />
-//             </div>
-
-//             {/* Eyebrow */}
-//             <h2 className="font-serif text-[#363637] text-[19px] sm:text-[22px] md:text-[24px] tracking-[0.22em] uppercase font-normal mt-1 mb-0.5">
-//               THE GOLDEN NUMERALIST
-//             </h2>
-
-//             {/* Display Name */}
-//             <h1 className="font-serif font-normal text-[54px] sm:text-[72px] md:text-[84px] lg:text-[92px] leading-[0.98] tracking-[-0.01em] bg-gradient-to-b from-[#CDA66F] via-[#C5934D] to-[#C5934D] bg-clip-text text-transparent select-none my-1 pb-1">
-//               Namrattaa Lal
-//             </h1>
-
-//             {/* Bottom Ornamental Divider */}
-//             <div className="flex items-center gap-3 w-full max-w-[300px] my-1.5 opacity-90">
-//               <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-[#CDA66F]/60 to-[#C5934D]" />
-//               <div className="text-[#C5934D]">
-//                 <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-//                   <path d="M12 0 C12 7.5 16.5 12 24 12 C16.5 12 12 16.5 12 24 C12 16.5 7.5 12 0 12 C7.5 12 12 7.5 12 0 Z" />
-//                 </svg>
-//               </div>
-//               <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-[#CDA66F]/60 to-[#C5934D]" />
-//             </div>
-//           </div>
-
-//           {/* Subheading / Value Proposition */}
-//           <h3
-//             className="
-//               !font-sans
-//               font-normal
-//               text-[#362312]
-//               tracking-[-0.025em]
-//               leading-[1.14]
-//               text-[clamp(32px,3.2vw,46px)]
-//               max-w-[560px]
-//             "
-//           >
-//             Guided by numbers, empowered by inner insight
-//           </h3>
-
-//           {/* Description */}
-//           <p
-//             className="
-//               !font-sans
-//               mt-[18px]
-//               max-w-[500px]
-//               text-[#363637]
-//               text-[15px]
-//               sm:text-[16px]
-//               leading-[1.65]
-//             "
-//           >
-//             Connect with Namrattaa Lal, The Golden Numeralist, and receive intuitive guidance illuminated by your unique patterns.
-//           </p>
-
-//           {/* Buttons */}
-//           <div className="flex items-center gap-[16px] mt-[34px] flex-wrap">
-//             <Link
-//               to="/sessions"
-//               className="
-//                 h-[52px]
-//                 px-[32px]
-//                 rounded-full
-//                 bg-[#A37735]
-//                 hover:bg-[#92662A]
-//                 text-[#FCFAF6]
-//                 text-[14px]
-//                 font-medium
-//                 shadow-[0_10px_24px_rgba(163,119,53,0.34)]
-//                 transition-all
-//                 hover:-translate-y-[2px]
-//                 hover:shadow-[0_14px_30px_rgba(163,119,53,0.44)]
-//                 flex
-//                 items-center
-//                 justify-center
-//                 gap-2
-//               "
-//             >
-//               <span>Book a Session</span>
-//               <span className="text-base leading-none">&rarr;</span>
-//             </Link>
-
-//             <Link
-//               to="/about"
-//               className="
-//                 h-[52px]
-//                 px-[30px]
-//                 rounded-full
-//                 bg-[#FEFCF8]/80
-//                 hover:bg-cream
-//                 border
-//                 border-[#7D6652]/35
-//                 hover:border-[#7D6652]/70
-//                 text-[#362312]
-//                 text-[14px]
-//                 font-medium
-//                 transition-colors
-//                 flex
-//                 items-center
-//                 justify-center
-//               "
-//             >
-//               Explore Sessions
-//             </Link>
-//           </div>
-//         </div>
-
-//         {/* =======================================================
-//             RIGHT VISUAL (CARDS)
-//             ======================================================= */}
-//         <HeroCards />
-//       </div>
-//     </section>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-
-
 import { Link } from 'react-router-dom';
 import { HeroCards } from './HeroCards';
 
@@ -226,25 +6,67 @@ export function Hero() {
     <section
       className="
         relative
-        min-h-[720px]
+        min-h-[calc(100vh-84px)]
+        lg:min-h-[720px]
+        xl:min-h-[780px]
         overflow-hidden
         bg-[#FDFBF7]
-        px-[clamp(24px,6vw,80px)]
-        py-[90px]
+        px-4
+        sm:px-6
+        md:px-10
+        lg:px-12
+        xl:px-16
+        2xl:px-20
+        pt-[92px]
+        sm:pt-[100px]
+        md:pt-[110px]
+        lg:pt-[96px]
+        pb-12
+        sm:pb-16
+        md:pb-20
+        lg:pb-16
         flex
         items-center
-        max-md:min-h-[900px]
-        max-md:py-[110px]
-        max-md:items-start
       "
     >
-
-
+      {/* =======================================================
+          BACKGROUND SUBTLE SACRED GEOMETRY
+          ======================================================= */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          right-[-25%]
+          sm:right-[-15%]
+          lg:right-[-8%]
+          xl:right-[-4%]
+          top-1/2
+          -translate-y-1/2
+          w-[520px]
+          sm:w-[680px]
+          lg:w-[800px]
+          xl:w-[860px]
+          h-[520px]
+          sm:h-[680px]
+          lg:h-[800px]
+          xl:h-[860px]
+          rounded-full
+          border
+          border-[#C5934D]/15
+          flex
+          items-center
+          justify-center
+          opacity-50
+        "
+      >
+        <div className="w-[84%] h-[84%] rounded-full border border-dashed border-[#C5934D]/15 flex items-center justify-center">
+          <div className="w-[72%] h-[72%] rounded-full border border-[#C5934D]/10" />
+        </div>
+      </div>
 
       {/* =======================================================
           MAIN CONTAINER
           ======================================================= */}
-
       <div
         className="
           relative
@@ -253,36 +75,40 @@ export function Hero() {
           max-w-[1400px]
           mx-auto
           grid
-          grid-cols-[1fr_1fr]
+          grid-cols-1
+          lg:grid-cols-2
           items-center
           gap-8
-          lg:gap-12
-          max-md:grid-cols-1
+          sm:gap-10
+          md:gap-12
+          lg:gap-8
+          xl:gap-14
         "
       >
-
         {/* =====================================================
             LEFT CONTENT
             ===================================================== */}
-
         <div
           className="
             relative
             z-20
             w-full
             max-w-[650px]
-            pt-4
-            md:pt-8
-            lg:pl-[2vw]
+            mx-auto
+            lg:mx-0
+            pt-2
+            sm:pt-4
+            lg:pt-0
+            lg:pl-2
+            xl:pl-4
+            order-2
+            lg:order-1
           "
         >
-
           {/* =================================================
               BRAND LOCKUP
               ================================================= */}
-
-          <div className="flex flex-col items-start mb-7">
-
+          <div className="flex flex-col items-start mb-6 sm:mb-7">
             {/* Top ornamental divider */}
             <div
               className="
@@ -290,11 +116,13 @@ export function Hero() {
                 items-center
                 gap-3
                 w-full
-                max-w-[350px]
-                mb-4
+                max-w-[260px]
+                sm:max-w-[320px]
+                md:max-w-[350px]
+                mb-3
+                sm:mb-4
               "
             >
-
               <div
                 className="
                   h-[1px]
@@ -307,7 +135,6 @@ export function Hero() {
               />
 
               <div className="flex items-center gap-1.5 text-[#C5934D]">
-
                 <svg
                   width="9"
                   height="9"
@@ -325,7 +152,6 @@ export function Hero() {
                 >
                   <path d="M12 0 C12 7.5 16.5 12 24 12 C16.5 12 12 16.5 12 24 C12 16.5 7.5 12 0 12 C7.5 12 12 7.5 12 0 Z" />
                 </svg>
-
               </div>
 
               <div
@@ -338,19 +164,20 @@ export function Hero() {
                   to-[#C5934D]
                 "
               />
-
             </div>
-
 
             {/* Brand */}
             <h2
               className="
                 font-serif
                 text-[#363637]
-                text-[16px]
-                sm:text-[18px]
-                md:text-[20px]
-                tracking-[0.24em]
+                text-[13px]
+                xs:text-[15px]
+                sm:text-[17px]
+                md:text-[19px]
+                lg:text-[20px]
+                tracking-[0.2em]
+                sm:tracking-[0.24em]
                 uppercase
                 font-normal
               "
@@ -358,18 +185,20 @@ export function Hero() {
               THE GOLDEN NUMERALIST
             </h2>
 
-
             {/* Name */}
             <h1
               className="
-                mt-2
+                mt-1.5
+                sm:mt-2
                 font-serif
                 font-normal
-                text-[56px]
-                sm:text-[70px]
-                md:text-[78px]
-                lg:text-[86px]
-                leading-[0.95]
+                text-[46px]
+                xs:text-[54px]
+                sm:text-[66px]
+                md:text-[76px]
+                lg:text-[78px]
+                xl:text-[86px]
+                leading-[0.96]
                 tracking-[-0.02em]
                 bg-gradient-to-b
                 from-[#C5934D]
@@ -378,12 +207,12 @@ export function Hero() {
                 bg-clip-text
                 text-transparent
                 select-none
-                pb-2
+                pb-1.5
+                sm:pb-2
               "
             >
               Namrattaa Lal
             </h1>
-
 
             {/* Bottom ornamental divider */}
             <div
@@ -392,11 +221,13 @@ export function Hero() {
                 items-center
                 gap-3
                 w-full
-                max-w-[300px]
-                mt-3
+                max-w-[220px]
+                sm:max-w-[270px]
+                md:max-w-[300px]
+                mt-2
+                sm:mt-3
               "
             >
-
               <div
                 className="
                   h-[1px]
@@ -409,7 +240,6 @@ export function Hero() {
               />
 
               <div className="text-[#C5934D]">
-
                 <svg
                   width="9"
                   height="9"
@@ -418,7 +248,6 @@ export function Hero() {
                 >
                   <path d="M12 0 C12 7.5 16.5 12 24 12 C16.5 12 12 16.5 12 24 C12 16.5 7.5 12 0 12 C7.5 12 12 7.5 12 0 Z" />
                 </svg>
-
               </div>
 
               <div
@@ -431,46 +260,50 @@ export function Hero() {
                   to-[#C5934D]
                 "
               />
-
             </div>
-
           </div>
-
 
           {/* =================================================
               MAIN HEADLINE
               ================================================= */}
-
           <h3
             className="
               !font-sans
               font-normal
               text-[#87533E]
-              tracking-[-0.035em]
-              leading-[1.08]
-              text-[clamp(34px,3.4vw,48px)]
-              
+              tracking-[-0.03em]
+              leading-[1.14]
+              sm:leading-[1.1]
+              text-[25px]
+              xs:text-[29px]
+              sm:text-[35px]
+              md:text-[40px]
+              lg:text-[42px]
+              xl:text-[48px]
+              max-w-[580px]
             "
           >
-            Guided by numbers,
-            <br />
+            Guided by numbers,{' '}
+            <br className="hidden sm:inline" />
             empowered by inner insight.
           </h3>
-
 
           {/* =================================================
               DESCRIPTION
               ================================================= */}
-
           <p
             className="
               !font-sans
-              mt-5
+              mt-4
+              sm:mt-5
               max-w-[515px]
               text-[#363637]
-              text-[15px]
-              sm:text-[16px]
-              leading-[1.7]
+              text-[14px]
+              xs:text-[14.5px]
+              sm:text-[15.5px]
+              md:text-[16px]
+              leading-[1.65]
+              sm:leading-[1.7]
             "
           >
             Connect with Namrattaa Lal, The Golden Numeralist,
@@ -478,33 +311,39 @@ export function Hero() {
             unique patterns.
           </p>
 
-
           {/* =================================================
               BUTTONS
               ================================================= */}
-
           <div
             className="
               flex
-              items-center
-              gap-5
-              mt-9
-              flex-wrap
+              flex-col
+              sm:flex-row
+              items-stretch
+              sm:items-center
+              gap-3.5
+              sm:gap-4
+              mt-7
+              sm:mt-9
+              w-full
+              sm:w-auto
             "
           >
-
             {/* Primary CTA */}
             <Link
               to="/sessions"
               className="
                 group
-                h-[52px]
-                px-[30px]
+                h-[48px]
+                sm:h-[52px]
+                px-7
+                sm:px-8
                 rounded-full
                 bg-[#87533E]
                 hover:bg-[#963f24]
                 text-[#FDFBF7]
-                text-[14px]
+                text-[13.5px]
+                sm:text-[14px]
                 font-medium
                 shadow-[0_8px_22px_rgba(169,79,47,0.22)]
                 transition-all
@@ -514,17 +353,18 @@ export function Hero() {
                 flex
                 items-center
                 justify-center
-                gap-3
+                gap-2.5
+                sm:gap-3
+                w-full
+                sm:w-auto
+                shrink-0
               "
             >
-
-              <span>
-                Book a Session
-              </span>
-
+              <span>Book a Session</span>
               <span
                 className="
-                  text-[17px]
+                  text-[16px]
+                  sm:text-[17px]
                   leading-none
                   transition-transform
                   duration-300
@@ -534,24 +374,25 @@ export function Hero() {
               >
                 ↗
               </span>
-
             </Link>
-
 
             {/* Secondary CTA */}
             <Link
               to="/about"
               className="
                 group
-                h-[52px]
-                px-[28px]
+                h-[48px]
+                sm:h-[52px]
+                px-6
+                sm:px-7
                 rounded-full
                 bg-transparent
                 border
                 border-[#87533E]/35
                 hover:border-[#87533E]
                 text-[#87533E]
-                text-[14px]
+                text-[13.5px]
+                sm:text-[14px]
                 font-medium
                 transition-all
                 duration-300
@@ -560,16 +401,16 @@ export function Hero() {
                 items-center
                 justify-center
                 gap-2
+                w-full
+                sm:w-auto
+                shrink-0
               "
             >
-
-              <span>
-                Explore Sessions
-              </span>
-
+              <span>Explore Sessions</span>
               <span
                 className="
-                  text-[16px]
+                  text-[15px]
+                  sm:text-[16px]
                   transition-transform
                   duration-300
                   group-hover:translate-x-1
@@ -578,18 +419,13 @@ export function Hero() {
               >
                 ↗
               </span>
-
             </Link>
-
           </div>
-
         </div>
 
-
         {/* =====================================================
-            RIGHT VISUAL
+            RIGHT VISUAL (CARDS)
             ===================================================== */}
-
         <div
           className="
             relative
@@ -597,21 +433,23 @@ export function Hero() {
             flex
             items-center
             justify-center
-            min-h-[560px]
-            lg:min-h-[620px]
-            max-md:min-h-[480px]
-            max-md:mt-[-10px]
+            w-full
+            min-h-[360px]
+            xs:min-h-[390px]
+            sm:min-h-[440px]
+            md:min-h-[480px]
+            lg:min-h-[540px]
+            xl:min-h-[580px]
+            mt-2
+            sm:mt-4
+            lg:mt-0
+            order-1
+            lg:order-2
           "
         >
-
-
-
           <HeroCards />
-
         </div>
-
       </div>
-
     </section>
   );
 }

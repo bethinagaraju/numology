@@ -62,6 +62,15 @@ export function Navbar() {
               key={path}
               to={path}
               className="relative group py-2 text-[#2B211B] font-medium transition-colors duration-300 hover:text-[#A98243]"
+              onClick={() => {
+                if (path.includes('#')) {
+                  const id = path.split('#')[1];
+                  const el = document.getElementById(id);
+                  if (el) {
+                    el.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }
+              }}
             >
               {label}
               <span className="absolute bottom-0 left-0 w-full h-[1px] bg-[#A98243] origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100" />
@@ -69,8 +78,16 @@ export function Navbar() {
           ))}
         </nav>
 
-        {/* BOOKING BUTTON DESKTOP */}
-        <BookingButton label="Book a session" className="ml-[8px] min-h-[40px] px-[18px] max-md:hidden" />
+        {/* HEADER ACTIONS DESKTOP */}
+        <div className="flex items-center gap-[10px] max-md:hidden">
+          <Link
+            to="/contact"
+            className="inline-flex items-center justify-center min-h-[40px] px-[18px] border border-[#C5A267]/60 text-[#2B211B] text-[11px] font-semibold tracking-[0.14em] uppercase transition-all duration-300 hover:border-[#A98243] hover:text-[#A98243] hover:bg-[#A98243]/5 hover:-translate-y-[1px]"
+          >
+            Contact Us
+          </Link>
+          <BookingButton label="Book a session" className="min-h-[40px] px-[18px]" />
+        </div>
 
         {/* MOBILE TOGGLE */}
         <button
@@ -109,7 +126,18 @@ export function Navbar() {
                   <Link
                     to={path}
                     className="block font-serif text-[38px] leading-[1.2] text-[#2B211B] border-b border-[#C5A267]/20 py-[20px] transition-colors hover:text-[#A98243]"
-                    onClick={() => setMenuOpen(false)}
+                    onClick={() => {
+                      setMenuOpen(false);
+                      if (path.includes('#')) {
+                        const id = path.split('#')[1];
+                        setTimeout(() => {
+                          const el = document.getElementById(id);
+                          if (el) {
+                            el.scrollIntoView({ behavior: 'smooth' });
+                          }
+                        }, 300);
+                      }
+                    }}
                   >
                     {label}
                   </Link>
@@ -117,7 +145,14 @@ export function Navbar() {
               ))}
             </div>
 
-            <motion.div variants={itemVariants} className="mt-10">
+            <motion.div variants={itemVariants} className="mt-8 flex flex-col gap-3">
+              <Link
+                to="/contact"
+                onClick={() => setMenuOpen(false)}
+                className="w-full justify-center min-h-[50px] inline-flex items-center border border-[#C5A267]/60 text-[#2B211B] hover:border-[#A98243] hover:text-[#A98243] text-[12px] font-semibold tracking-[0.14em] uppercase transition-all duration-300"
+              >
+                Contact Us
+              </Link>
               <BookingButton label="Book a session" className="w-full justify-center min-h-[54px] text-[12px]" />
             </motion.div>
 

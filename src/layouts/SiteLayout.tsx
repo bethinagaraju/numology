@@ -15,8 +15,19 @@ import { Stories } from '@/pages/Stories';
 import { Contact } from '@/pages/Contact';
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
-  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  const { pathname, hash } = useLocation();
+  useEffect(() => {
+    if (hash) {
+      setTimeout(() => {
+        const el = document.getElementById(hash.replace('#', ''));
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
   return null;
 }
 
@@ -32,6 +43,9 @@ export function SiteLayout() {
             <Route path="/about" element={<About />} />
             <Route path="/sessions" element={<Sessions />} />
             <Route path="/sessions/:slug" element={<SessionDetail />} />
+            <Route path="/detailed-package" element={<SessionDetail />} />
+            <Route path="/basic-package" element={<SessionDetail />} />
+            <Route path="/comprehensive-package" element={<SessionDetail />} />
             <Route path="/numerology-tools" element={<Tools />} />
             <Route path="/numerology-tools/:tool" element={<ToolDetail />} />
             <Route path="/journal" element={<Journal />} />

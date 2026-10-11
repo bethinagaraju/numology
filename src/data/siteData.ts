@@ -1,5 +1,5 @@
 export const navItems: [string, string][] = [
-  ['About', '/about'],
+  ['About', '/#about-us'],
   ['Sessions', '/sessions'],
   ['Numerology Tools', '/numerology-tools'],
   ['Journal', '/journal'],
@@ -49,6 +49,9 @@ export const packageData = [
     focus: 'Essential Life Pillars',
     items: [
       'All topics in Basic Package',
+      'Life Path Number – Core Life Purpose',
+      'Destiny Number – Latent Talents',
+      'Current Personal Year Forecast',
       'Career & Financial Outlook',
       'Yogas in Numerology',
       'Key Health Concerns',
@@ -69,108 +72,76 @@ export const packageData = [
 ];
 
 export const packages = [
-  { slug: 'basic-package', title: 'Basic Package', price: 'AED 150', text: 'A focused beginning for exploring your core numerology foundations.' },
-  { slug: 'detailed-package', title: 'Detailed Package', price: 'AED 300', text: 'A deeper conversation across the essential pillars of your personal map.' },
-  { slug: 'comprehensive-package', title: 'Comprehensive Package', price: 'AED 500', text: 'A complete alignment session for a fuller, more considered perspective.' },
+  { slug: 'basic-package', title: 'Basic Package', text: 'A focused beginning for exploring your core numerology foundations.' },
+  { slug: 'detailed-package', title: 'Detailed Package', text: 'A deeper conversation across the essential pillars of your personal map.' },
+  { slug: 'comprehensive-package', title: 'Comprehensive Package', text: 'A complete alignment session for a fuller, more considered perspective.' },
 ];
 
 export const serviceTypes = [
-  'Personal Numerology',
-  'Career Numerology',
-  'Relationship Compatibility',
-  'Business Numerology',
+  'Personality & Destiny',
+  'Career & Business',
+  'Marriage Compatibility',
+  'Family & Relationships',
   'Name Analysis',
-  'Mobile & Vehicle Analysis',
+  'Upcoming Personal Year',
 ];
 
 export const toolMeta: Record<string, { title: string; subtitle?: string; description: string; guideDescription?: string; category?: string; placeholder: string }> = {
-  'life-path': {
-    title: 'Life Path Number',
-    subtitle: 'The path you walk',
-    description: "Your Life Path Number is traditionally associated with the themes, tendencies and lessons that shape your life's journey.",
-    guideDescription: "The Life Path Number is one of the central numbers traditionally explored in numerology. It is associated with the themes, tendencies and lessons that may accompany a person's life journey.",
-    category: 'Core Numbers',
-    placeholder: 'Date of birth'
-  },
-  destiny: {
-    title: 'Destiny / Expression Number',
-    subtitle: 'Your expression',
-    description: "The Destiny, or Expression, Number is traditionally connected with your abilities, natural tendencies and the way you express yourself in the world.",
-    guideDescription: "The Destiny Number (sometimes called the Expression Number) is drawn from the letters of your full birth name. In traditional numerology, it is thought to represent the natural talents, abilities, and potential you brought into the world. While the Life Path indicates your journey, the Destiny Number indicates the tools and inherent characteristics you use to walk that path.",
-    category: 'Core Numbers',
-    placeholder: 'Full name'
-  },
-  'soul-urge': {
-    title: 'Soul Urge Number',
-    subtitle: 'What moves you',
-    description: "The Soul Urge Number explores the inner motivations, desires and values traditionally associated with the vowels in your name.",
-    guideDescription: "Calculated entirely from the vowels in your name, the Soul Urge (or Heart's Desire) Number speaks to your innermost motivations, private dreams, and the deep emotional drives that guide your decisions. It represents what you truly value and crave on a soul level, often beneath the surface of what others might see.",
-    category: 'Core Numbers',
-    placeholder: 'Full name'
-  },
-  personality: {
+  'personality-number': {
     title: 'Personality Number',
-    subtitle: 'How you are seen',
-    description: "The Personality Number is traditionally associated with the qualities you reveal outwardly and the impression you may create on others.",
-    guideDescription: "Derived from the consonants in your name, the Personality Number acts as a filter or an outer persona. It describes the traits you project to the world and the first impressions you give to others before they get to know you deeply. In numerology, it is considered the protective shield or gateway to your inner self.",
-    category: 'Core Numbers',
+    subtitle: 'Driver / Mulank • Core Nature',
+    description: "Calculated from your birth day, the Personality Number reveals your inherent character, behavioral instincts, and outer vibration in Lo Shu Numerology.",
+    guideDescription: "In Lo Shu Numerology, the Personality Number (also revered as the Driver, Mulank, or Basic Number) is determined strictly by the day of your birth reduced to a single digit (1–9). It governs your core self-identity, instinctive reactions, leadership style, and the primary frequency you radiate into your environment.",
+    category: 'LoShu Numerology',
+    placeholder: 'Day of birth (e.g. 14)'
+  },
+  'destiny-number': {
+    title: 'Destiny Number',
+    subtitle: 'Conductor / Bhagyank • Life Purpose',
+    description: "Derived from your complete date of birth, the Destiny Number maps your ultimate life mission, career potential, and karmic destiny.",
+    guideDescription: "The Destiny Number (known as the Conductor or Bhagyank in Lo Shu Numerology) is calculated by adding every digit in your full date of birth (Day + Month + Year) down to a single digit (1–9). While the Personality Number dictates who you are and how you act, the Destiny Number reveals what you have come here to achieve and where your life events will guide you.",
+    category: 'LoShu Numerology',
+    placeholder: 'Full date of birth (DD/MM/YYYY)'
+  },
+  'aura-kua-number': {
+    title: 'Aura/Kua Number',
+    subtitle: 'Energy Shield • Cosmic Directions',
+    description: "Calculated from your birth year and gender, the Aura/Kua number reveals your magnetic frequency, protective aura, and auspicious Feng Shui directions.",
+    guideDescription: "In Lo Shu Grid and Chinese energetic tradition, the Kua (or Gua) Number—frequently known as your Aura Number—reveals your magnetic resonance and cosmic orientation. Calculated from your solar birth year and gender, it categorizes you into either the East or West group, unlocking your four most auspicious compass directions for prosperity, vitality, harmonious relationships, and personal growth.",
+    category: 'LoShu Numerology',
+    placeholder: 'Birth year & gender'
+  },
+  'name-numerology': {
+    title: 'Name Numerology',
+    subtitle: 'Harmonic Frequency • Compound Power',
+    description: "Analyzes your full name vibration to ensure complete harmony with your Lo Shu Driver (Personality) and Conductor (Destiny) numbers.",
+    guideDescription: "In Lo Shu Numerology, your name is your active living sound vibration. Every character carries numerical weight that combines into both a compound number and a single-digit root frequency. Name Numerology reveals whether your current name creates a harmonic bridge or destructive tension with your Driver and Conductor numbers, offering guidance for auspicious spelling alignment.",
+    category: 'LoShu Numerology',
     placeholder: 'Full name'
   },
-  'personal-year': {
-    title: 'Personal Year Number',
-    subtitle: 'The theme of your year',
-    description: "A traditional numerology concept used to explore the symbolic theme associated with a particular year of your life.",
-    guideDescription: "Numerology views life in 9-year cycles, with each year bringing its own specific energy and focus. The Personal Year Number helps you understand the current rhythm of your life, highlighting the themes, opportunities, and challenges you might face during this 12-month period. It can be a powerful tool for planning and reflection.",
-    category: 'Personal Cycles',
+  'personal-year-numerology': {
+    title: 'Personal Year Numerology',
+    subtitle: '9-Year Cycle • Annual Transit Energy',
+    description: "Forecasts the energetic theme, opportunities, and evolutionary focus of your current year within the 9-year Lo Shu cycle.",
+    guideDescription: "Lo Shu Numerology charts your life rhythm across repeating 9-year cycles. By combining your birth day and birth month with the current year, the Personal Year Number reveals the unique climate of your current twelve months—empowering you to know when to start fresh, build patiently, expand dynamically, or consolidate your wisdom.",
+    category: 'LoShu Numerology',
     placeholder: 'Date of birth'
-  },
-  'name-number': {
-    title: 'Name Number',
-    subtitle: 'The energy of your name',
-    description: "Explore the traditional numerological symbolism associated with the letters and numbers within a name.",
-    guideDescription: "Every letter carries a numerical vibration. The overall Name Number represents the energetic signature of the name you currently use. Many practitioners look at the Name Number to see if it harmonizes well with your core birth numbers, and to understand the everyday frequency you project into your personal and professional life.",
-    category: 'Everyday Numerology',
-    placeholder: 'Full name'
-  },
-  compatibility: {
-    title: 'Relationship Compatibility',
-    subtitle: 'Two numbers, one connection',
-    description: "Explore how two Life Path Numbers are traditionally compared within numerology.",
-    guideDescription: "Numerology compatibility involves looking at the interplay between two distinct sets of core numbers. While no two numbers are entirely 'incompatible', some combinations naturally harmonize, while others require conscious effort and understanding. Analyzing relationship numbers can provide deep insight into communication styles, shared goals, and mutual growth.",
-    category: 'Everyday Numerology',
-    placeholder: 'Two dates of birth'
-  },
-  'business-name': {
-    title: 'Business Name Number',
-    subtitle: 'The name of your business',
-    description: "Discover the traditional numerological themes associated with the name of a business.",
-    guideDescription: "Just like a person, a business has a numerical identity. The Business Name Number is traditionally used to gauge the outward energy, public perception, and overall success potential of an enterprise. A supportive business name should ideally resonate with the nature of the industry and the core numbers of the founders.",
-    category: 'Everyday Numerology',
-    placeholder: 'Business name'
-  },
-  mobile: {
-    title: 'Mobile Number Analysis',
-    subtitle: 'The number you carry',
-    description: "Explore traditional numerological interpretations associated with the digits within a mobile number.",
-    guideDescription: "In modern numerology, the numbers we carry with us daily—like a mobile phone number—are seen as a subtle frequency that interacts with our lives. Practitioners often analyze mobile numbers to identify patterns related to communication, social connectivity, and the kinds of interactions that number might attract.",
-    category: 'Everyday Numerology',
-    placeholder: 'Mobile number'
-  },
-  vehicle: {
-    title: 'Vehicle Number Analysis',
-    subtitle: 'The number on your journey',
-    description: "Explore traditional numerological interpretations associated with a vehicle registration number.",
-    guideDescription: "A vehicle's registration number is often explored in everyday numerology to understand the energetic 'vibe' of the car. Some numbers are traditionally associated with steady, reliable journeys, while others might suggest speed, frequent movement, or the need for more careful attention on the road.",
-    category: 'Everyday Numerology',
-    placeholder: 'Registration number'
   },
 };
 
+// Aliases for compatibility
+toolMeta['personality'] = toolMeta['personality-number'];
+toolMeta['destiny'] = toolMeta['destiny-number'];
+toolMeta['kua-number'] = toolMeta['aura-kua-number'];
+toolMeta['name-number'] = toolMeta['name-numerology'];
+toolMeta['personal-year'] = toolMeta['personal-year-numerology'];
+
+
 export const articles = [
-  { 
-    slug: 'life-path-number', 
-    category: 'Numerology basics', 
-    title: 'What is a Life Path Number?', 
+  {
+    slug: 'life-path-number',
+    category: 'Numerology basics',
+    title: 'What is a Life Path Number?',
     text: 'A gentle introduction to one of the most familiar starting points in a numerology conversation.',
     content: [
       { type: 'p', text: 'The Life Path Number is often considered the foundation of a numerology chart. Calculated from your complete date of birth, it is traditionally seen as the unchangeable blueprint of your life.' },
@@ -179,10 +150,10 @@ export const articles = [
       { type: 'p', text: 'It is important to remember that this number does not dictate your destiny. Instead, it offers a symbolic language to reflect upon your natural tendencies and how you choose to navigate the path ahead.' }
     ]
   },
-  { 
-    slug: 'name-numbers', 
-    category: 'Names', 
-    title: 'Understanding Name Numbers', 
+  {
+    slug: 'name-numbers',
+    category: 'Names',
+    title: 'Understanding Name Numbers',
     text: 'How practitioners traditionally explore the letters in a name as a symbolic pattern.',
     content: [
       { type: 'p', text: 'While your birth date is fixed, your name represents the evolving expression of who you are. In numerology, every letter is assigned a numerical vibration, creating a unique pattern when combined.' },
@@ -191,10 +162,10 @@ export const articles = [
       { type: 'p', text: 'Exploring your name numbers is an invitation to consider how you present yourself and the qualities you naturally bring into a room.' }
     ]
   },
-  { 
-    slug: 'how-a-session-works', 
-    category: 'Guidance', 
-    title: 'How does a numerology session work?', 
+  {
+    slug: 'how-a-session-works',
+    category: 'Guidance',
+    title: 'How does a numerology session work?',
     text: 'A look at the questions, details and conversation that shape a personal session.',
     content: [
       { type: 'p', text: 'A numerology session is not about predicting the future. Instead, it is a structured, collaborative conversation designed to give you a fresh perspective on your life\'s patterns.' },

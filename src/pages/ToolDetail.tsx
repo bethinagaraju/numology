@@ -4,10 +4,18 @@ import { PageIntro } from '@/components/PageIntro';
 import { BookingButton } from '@/components/BookingButton';
 import { toolMeta } from '@/data/siteData';
 
+const canonicalTools = [
+  'personality-number',
+  'destiny-number',
+  'aura-kua-number',
+  'name-numerology',
+  'personal-year-numerology'
+];
+
 export function ToolDetail() {
   const { pathname } = useLocation();
-  const slug = pathname.split('/').pop() ?? 'life-path';
-  const meta = toolMeta[slug] ?? toolMeta['life-path'];
+  const slug = pathname.split('/').pop() ?? 'personality-number';
+  const meta = toolMeta[slug] ?? toolMeta['personality-number'];
 
   return (
     <>
@@ -34,17 +42,20 @@ export function ToolDetail() {
         <div className="border-t border-[#E0DCD8] pt-[60px] text-center">
           <h3 className="font-serif text-[20px] text-[#171717] mb-[40px] uppercase">Related Guides</h3>
           <div className="flex flex-wrap justify-center gap-[15px]">
-            {Object.entries(toolMeta)
-              .filter(([key, t]) => t.category === meta.category && key !== slug)
-              .map(([key, t]) => (
-                <Link 
-                  key={key} 
-                  to={`/numerology-tools/${key}`}
-                  className="inline-flex items-center gap-[8px] bg-[#FEFCF8] border border-[#E0DCD8] px-[20px] py-[12px] text-[11px] uppercase tracking-[0.15em] font-medium text-[#353536] transition-all hover:border-[#C29454] hover:text-[#785342]"
-                >
-                  {t.title} <ArrowLeft size={12} className="rotate-180" />
-                </Link>
-            ))}
+            {canonicalTools
+              .filter((key) => key !== slug && toolMeta[key]?.title !== meta.title)
+              .map((key) => {
+                const t = toolMeta[key];
+                return (
+                  <Link 
+                    key={key} 
+                    to={`/numerology-tools/${key}`}
+                    className="inline-flex items-center gap-[8px] bg-[#FEFCF8] border border-[#E0DCD8] px-[20px] py-[12px] text-[11px] uppercase tracking-[0.15em] font-medium text-[#353536] transition-all hover:border-[#C29454] hover:text-[#785342]"
+                  >
+                    {t.title} <ArrowLeft size={12} className="rotate-180" />
+                  </Link>
+                );
+              })}
           </div>
         </div>
       </section>

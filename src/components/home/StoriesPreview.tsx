@@ -627,6 +627,13 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const reviews = [
+
+  {
+    text: "Did a wonderful Numerology session with Namrattaa Lal ❤️ Was quite amazed by your knowledge",
+    author: "Kanika",
+    // type: "Comprehensive Report"
+  },
+
   {
     text: "An incredibly insightful session. Namrattaa explained the numbers clearly with real-life examples and helped me understand my personality, strengths, and areas for growth.",
     author: "Ashis",
@@ -647,21 +654,17 @@ const reviews = [
     author: "Anonymous Client",
     // type: "Name Numerology"
   },
-  {
-    text: "Thank you so much for your guidance Namrattaa Lal. I can actually relate many of your readings to my own thinking, feelings and life, so guidance like this would help one realize what is actually meant for them. It gives a good guidance on one's qualities and how they can learn and move forward. My heart feels light thank you so much Namrattaa Lal And yes I have noted on some active steps you have given me to move better and will do it!",
-    author: "Kaveri",
-    // type: "Lo Shu Grid Analysis"
-  },
-  {
-    text: "Did a wonderful Numerology session with Namrattaa Lal ❤️ Was quite amazed by your knowledge",
-    author: "Kanika",
-    // type: "Comprehensive Report"
-  },
   // {
-  //   text: "The remedies suggested were simple yet profound. I've noticed a real shift in my daily energy.",
-  //   author: "Anita V.",
-  //   // type: "Remedies & Guidance"
+  //   text: "Thank you so much for your guidance Namrattaa Lal. I can actually relate many of your readings to my own thinking, feelings and life, so guidance like this would help one realize what is actually meant for them. It gives a good guidance on one's qualities and how they can learn and move forward. My heart feels light thank you so much Namrattaa Lal And yes I have noted on some active steps you have given me to move better and will do it!",
+  //   author: "Kaveri",
+  //   // type: "Lo Shu Grid Analysis"
   // },
+
+  {
+    text: "The remedies suggested were simple yet profound. I've noticed a real shift in my daily energy.",
+    author: "Anita V.",
+    // type: "Remedies & Guidance"
+  },
   // {
   //   text: "Understanding my personal year number helped me stop fighting against the current and start flowing.",
   //   author: "Marcus J.",
