@@ -341,53 +341,59 @@
 //   );
 // }
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowLeft,
   ArrowRight,
   Quote,
   Sparkles,
   Star,
+  X,
 } from "lucide-react";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { PageIntro } from "@/components/PageIntro";
 
-const reviews = [
+interface ReviewItem {
+  text: string;
+  author: string;
+  type: string;
+}
+
+interface ActiveReview extends ReviewItem {
+  number?: string;
+}
+
+const reviews: ReviewItem[] = [
   {
-    text: "An incredibly insightful experience. Namrattaa explained each number with great clarity and helped me understand how they connect with my personality, strengths and life journey.",
-    author: "Ashis",
-    type: "Numerology Session",
+    "text": "I had a wonderful session with Namrattaa and truly found it insightful and meaningful. She is extremely knowledgeable and explained everything so clearly, precisely, and in such a lovely way. The session helped me understand my personality, strengths, and certain aspects of myself on a much deeper level. What I especially appreciated was how she guided me on how to work with these qualities and challenges to create more balance and harmony in my life. I came away with a much better understanding of myself and some really valuable perspectives to reflect on. Highly recommend her for anyone looking for an insightful and well explained numerology session!",
+    "author": "Grateful Client",
+    "type": "testimonial"
   },
   {
-    text: "A wonderful and meaningful session. Namrattaa explained everything so clearly and helped me understand my personality, strengths and certain aspects of myself on a much deeper level.",
-    author: "Grateful Client",
-    type: "Numerology Reading",
+    "text": "I had a wonderful and insightful session with Namrattaa Lal. She explained the science of numerology beautifully and went into depth while interpreting my specific chart. The session was detailed and gave me a much better understanding of my life, my strengths, areas where I can improve, and how to navigate things more consciously. I loved how clearly and practically everything was explained. The remedies suggested were also very straightforward, simple, and easy to implement in everyday life.",
+    "author": "Anonymous Client",
+    "type": "testimonial"
   },
   {
-    text: "I had a wonderful Numerology session with Namrattaa Lal. I was truly amazed by her knowledge and the depth of her insights.",
-    author: "Kanika",
-    type: "Numerology Session",
+    "text": "I had a wonderful experience with the numerologist Namrattaa. The consultation was very insightful, detailed, and positive. I truly appreciated the time, patience, and professionalism throughout the session. The guidance was explained clearly and gave me a lot to think about. Thank you for such a pleasant experience and excellent service. I would definitely recommend your service to others!",
+    "author": "Rinki Mitra",
+    "type": "testimonial"
   },
   {
-    text: "The session gave me a much better understanding of my life, my strengths and areas where I can improve. Everything was explained clearly and the remedies suggested were simple and practical.",
-    author: "Rinki Mitra",
-    type: "Numerology Reading",
+    "text": "Thank you so much for your guidance Namrattaa Lal. I can actually relate many of your readings to my own thinking, feelings and life, so guidance like this would help one realize what is actually meant for them. It gives a good guidance on one's qualities and how they can learn and move forward. My heart feels light thank you so much Namrattaa Lal. And yes I have noted on some active steps you have given me to move better and will do it!",
+    "author": "Kaveri",
+    "type": "numerology-reading"
   },
   {
-    text: "I could genuinely relate many of the readings to my own thinking, feelings and life. Her guidance gave me a new perspective and practical steps to move forward.",
-    author: "Kaveri",
-    type: "Numerology Guidance",
+    "text": "Talking with Namrattaa about my reading and numbers, I realised and came to know what exactly numbers stands for and tells us about our personality and life happenings, remedies are so simple which we should adopt in life, thank you so much Namrattaa for giving me new perspective in life.",
+    "author": "Anonymous Client",
+    "type": "numerology-feedback"
   },
   {
-    text: "The consultation was insightful, detailed and positive. I truly appreciated the time, patience and professionalism throughout the session.",
-    author: "Grateful Client",
-    type: "Numerology Consultation",
-  },
-  {
-    text: "Talking with Namrattaa helped me understand what numbers represent and how they connect with personality and life happenings. The simple remedies gave me a fresh perspective on life.",
-    author: "Grateful Client",
-    type: "Numerology Reading",
-  },
+    "text": "Did a wonderful Numerology session with Namrattaa Lal ❤️ Was quite amazed by your knowledge",
+    "author": "Kanika",
+    "type": "testimonial"
+  }
 ];
 
 const GoldStars = ({ small = false }: { small?: boolean }) => (
@@ -406,17 +412,60 @@ const GoldStars = ({ small = false }: { small?: boolean }) => (
 
 export function Stories() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [activeReview, setActiveReview] = useState<ActiveReview | null>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setActiveReview(null);
+      }
+    };
+    if (activeReview) {
+      window.addEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "unset";
+    };
+  }, [activeReview]);
+
+  const [isPaused, setIsPaused] = useState(false);
 
   const scroll = (direction: "left" | "right") => {
     if (!scrollRef.current) return;
+    const container = scrollRef.current;
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+    const amount = isMobile ? container.clientWidth * 0.88 : container.clientWidth / 2 + 12;
 
-    const amount = scrollRef.current.clientWidth * 0.85;
-
-    scrollRef.current.scrollBy({
-      left: direction === "left" ? -amount : amount,
-      behavior: "smooth",
-    });
+    if (direction === "right") {
+      const isAtEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth - 25;
+      if (isAtEnd) {
+        container.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        container.scrollBy({ left: amount, behavior: "smooth" });
+      }
+    } else {
+      const isAtStart = container.scrollLeft <= 25;
+      if (isAtStart) {
+        container.scrollTo({ left: container.scrollWidth, behavior: "smooth" });
+      } else {
+        container.scrollBy({ left: -amount, behavior: "smooth" });
+      }
+    }
   };
+
+  useEffect(() => {
+    if (activeReview || isPaused) return;
+
+    const timer = setInterval(() => {
+      scroll("right");
+    }, 4000);
+
+    return () => clearInterval(timer);
+  }, [activeReview, isPaused]);
 
   return (
     <>
@@ -627,6 +676,10 @@ export function Stories() {
 
             <div
               ref={scrollRef}
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+              onTouchStart={() => setIsPaused(true)}
+              onTouchEnd={() => setIsPaused(false)}
               className="
                 flex
                 snap-x
@@ -640,148 +693,181 @@ export function Stories() {
               "
             >
 
-              {reviews.slice(1).map((review, index) => (
+              {reviews.slice(1).map((review, index) => {
+                const reviewNumber = String(index + 2).padStart(2, "0");
+                const isLong = review.text.length > 140;
 
-                <motion.article
-                  key={`${review.author}-${index}`}
-                  initial={{ opacity: 0, y: 35 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.15 }}
-                  transition={{
-                    duration: 0.65,
-                    delay: index * 0.07,
-                  }}
-                  className="
-                    group
-                    relative
-                    flex
-                    min-h-[410px]
-                    w-[88%]
-                    flex-none
-                    snap-start
-                    flex-col
-                    justify-between
-                    overflow-hidden
-                    border
-                    border-[#CDA66F]/35
-                    bg-white/65
-                    p-8
-                    backdrop-blur-sm
-                    transition-all
-                    duration-500
-                    hover:-translate-y-2
-                    hover:border-[#C5934D]/80
-                    hover:bg-white
-                    hover:shadow-[0_25px_60px_rgba(88,55,25,0.10)]
-                    sm:w-[70%]
-                    md:w-[calc(50%-12px)]
-                    md:p-10
-                  "
-                >
-
-                  {/* Top gold line */}
-
-                  <div
+                return (
+                  <motion.article
+                    key={`${review.author}-${index}`}
+                    initial={{ opacity: 0, y: 35 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.15 }}
+                    transition={{
+                      duration: 0.65,
+                      delay: index * 0.07,
+                    }}
                     className="
-                      absolute
-                      left-0
-                      top-0
-                      h-[2px]
-                      w-full
-                      origin-left
-                      scale-x-0
-                      bg-gradient-to-r
-                      from-[#A85030]
-                      via-[#D8993E]
-                      to-[#A85030]
-                      transition-transform
-                      duration-700
-                      group-hover:scale-x-100
+                      group
+                      relative
+                      flex
+                      min-h-[390px]
+                      w-[88%]
+                      flex-none
+                      snap-start
+                      flex-col
+                      justify-between
+                      overflow-hidden
+                      border
+                      border-[#CDA66F]/35
+                      bg-white/65
+                      p-8
+                      backdrop-blur-sm
+                      transition-all
+                      duration-500
+                      hover:-translate-y-2
+                      hover:border-[#C5934D]/80
+                      hover:bg-white
+                      hover:shadow-[0_25px_60px_rgba(88,55,25,0.10)]
+                      sm:w-[70%]
+                      md:w-[calc(50%-12px)]
+                      md:p-10
                     "
-                  />
+                  >
+                    {/* Top gold line */}
+                    <div
+                      className="
+                        absolute
+                        left-0
+                        top-0
+                        h-[2px]
+                        w-full
+                        origin-left
+                        scale-x-0
+                        bg-gradient-to-r
+                        from-[#A85030]
+                        via-[#D8993E]
+                        to-[#A85030]
+                        transition-transform
+                        duration-700
+                        group-hover:scale-x-100
+                      "
+                    />
 
-                  {/* Floating quote */}
-
-                  <div className="absolute right-7 top-6 text-[#C5934D]/10">
-                    <Quote size={60} strokeWidth={0.7} />
-                  </div>
-
-                  <div>
-
-                    {/* Number */}
-
-                    <div className="mb-7 flex items-center justify-between">
-
-                      <span
-                        className="
-                          flex
-                          h-9
-                          w-9
-                          items-center
-                          justify-center
-                          rounded-full
-                          border
-                          border-[#CDA66F]/40
-                          font-serif
-                          text-sm
-                          text-[#A98243]
-                        "
-                      >
-                        {String(index + 2).padStart(2, "0")}
-                      </span>
-
-                      <GoldStars small />
-
+                    {/* Floating quote */}
+                    <div className="absolute right-7 top-6 text-[#C5934D]/10">
+                      <Quote size={60} strokeWidth={0.7} />
                     </div>
 
-                    {/* Review */}
+                    <div>
+                      {/* Number & Stars */}
+                      <div className="mb-7 flex items-center justify-between">
+                        <span
+                          className="
+                            flex
+                            h-9
+                            w-9
+                            items-center
+                            justify-center
+                            rounded-full
+                            border
+                            border-[#CDA66F]/40
+                            font-serif
+                            text-sm
+                            text-[#A98243]
+                          "
+                        >
+                          {reviewNumber}
+                        </span>
 
-                    <blockquote
-                      className="
-                        font-serif
-                        text-[18px]
-                        italic
-                        leading-[1.7]
-                        text-[#373535]
-                        md:text-[20px]
-                      "
-                    >
-                      “{review.text}”
-                    </blockquote>
-
-                  </div>
-
-                  {/* Author */}
-
-                  <div className="mt-10">
-
-                    <div className="mb-6 h-px bg-gradient-to-r from-[#CDA66F]/50 via-[#CDA66F]/20 to-transparent" />
-
-                    <div className="flex items-end justify-between">
-
-                      <div>
-
-                        <p className="font-serif text-xl text-[#87533E]">
-                          {review.author}
-                        </p>
-
-                        <p className="mt-1 text-[9px] uppercase tracking-[0.24em] text-[#A98243]">
-                          {review.type}
-                        </p>
-
+                        <GoldStars small />
                       </div>
 
-                      <span className="font-serif text-5xl leading-none text-[#C5934D]/15">
-                        ”
-                      </span>
+                      {/* Review Clamped to 4 lines */}
+                      <blockquote
+                        onClick={() => {
+                          if (isLong) {
+                            setActiveReview({ ...review, number: reviewNumber });
+                          }
+                        }}
+                        title={isLong ? "Click to read full review" : undefined}
+                        className={`
+                          font-serif
+                          text-[18px]
+                          italic
+                          leading-[1.7]
+                          text-[#373535]
+                          md:text-[20px]
+                          line-clamp-4
+                          ${isLong ? "cursor-pointer transition-colors duration-200 hover:text-[#87533E]" : ""}
+                        `}
+                        style={{
+                          display: "-webkit-box",
+                          WebkitLineClamp: 4,
+                          WebkitBoxOrient: "vertical",
+                          overflow: "hidden",
+                        }}
+                      >
+                        “{review.text}”
+                      </blockquote>
 
+                      {/* Read More button */}
+                      {isLong && (
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setActiveReview({ ...review, number: reviewNumber });
+                          }}
+                          className="
+                            mt-3.5
+                            inline-flex
+                            items-center
+                            gap-1.5
+                            text-[11px]
+                            font-semibold
+                            uppercase
+                            tracking-[0.18em]
+                            text-[#87533E]
+                            transition-colors
+                            duration-200
+                            hover:text-[#C5934D]
+                            group/btn
+                          "
+                        >
+                          <span className="border-b border-[#87533E]/40 pb-0.5 transition-colors group-hover/btn:border-[#C5934D]">
+                            Read more
+                          </span>
+                          <span className="text-xs transition-transform duration-200 group-hover/btn:translate-x-1">
+                            →
+                          </span>
+                        </button>
+                      )}
                     </div>
 
-                  </div>
+                    {/* Author */}
+                    <div className="mt-8">
+                      <div className="mb-6 h-px bg-gradient-to-r from-[#CDA66F]/50 via-[#CDA66F]/20 to-transparent" />
 
-                </motion.article>
+                      <div className="flex items-end justify-between">
+                        <div>
+                          <p className="font-serif text-xl text-[#87533E]">
+                            {review.author}
+                          </p>
 
-              ))}
+                          <p className="mt-1 text-[9px] uppercase tracking-[0.24em] text-[#A98243]">
+                            {review.type}
+                          </p>
+                        </div>
+
+                        <span className="font-serif text-5xl leading-none text-[#C5934D]/15">
+                          ”
+                        </span>
+                      </div>
+                    </div>
+                  </motion.article>
+                );
+              })}
 
             </div>
 
@@ -1056,6 +1142,140 @@ export function Stories() {
 
         </div>
       </section>
+
+      {/* ============================================================
+          POP CARD MODAL - FULL REVIEW
+      ============================================================ */}
+      <AnimatePresence>
+        {activeReview && (
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="active-review-author"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-8"
+          >
+            {/* Backdrop with warm dark blur */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              onClick={() => setActiveReview(null)}
+              className="fixed inset-0 bg-[#241710]/70 backdrop-blur-md"
+            />
+
+            {/* Pop Card Container */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.93, y: 24 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 16 }}
+              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+              className="
+                relative
+                z-10
+                flex
+                max-h-[88vh]
+                w-full
+                max-w-[650px]
+                flex-col
+                overflow-hidden
+                border
+                border-[#C5934D]/60
+                bg-[#FEFCF8]
+                shadow-[0_30px_90px_rgba(36,23,16,0.35)]
+              "
+            >
+              {/* Top luxury line */}
+              <div className="h-[3px] w-full bg-gradient-to-r from-[#A85030] via-[#D8993E] to-[#A85030]" />
+
+              {/* Inner decorative border */}
+              <div className="pointer-events-none absolute inset-3 border border-[#C5934D]/25 sm:inset-4" />
+
+              {/* Corner brackets */}
+              <div className="pointer-events-none absolute left-4 top-4 h-6 w-6 border-l border-t border-[#C5934D]/60" />
+              <div className="pointer-events-none absolute right-4 top-4 h-6 w-6 border-r border-t border-[#C5934D]/60" />
+              <div className="pointer-events-none absolute bottom-4 left-4 h-6 w-6 border-b border-l border-[#C5934D]/60" />
+              <div className="pointer-events-none absolute bottom-4 right-4 h-6 w-6 border-b border-r border-[#C5934D]/60" />
+
+              {/* Decorative watermark quote */}
+              <div className="pointer-events-none absolute right-8 top-10 select-none font-serif text-[140px] leading-none text-[#C5934D]/[0.07]">
+                “
+              </div>
+
+              {/* Scrollable Content */}
+              <div className="relative z-10 flex flex-col overflow-y-auto px-7 py-8 sm:px-11 sm:py-10 [scrollbar-width:thin]">
+                {/* Header: badge, stars, close button */}
+                <div className="flex items-center justify-between border-b border-[#CDA66F]/30 pb-5">
+                  <div className="flex items-center gap-3">
+                    {activeReview.number && (
+                      <span className="flex h-9 w-9 items-center justify-center rounded-full border border-[#CDA66F]/50 bg-[#F8F3E8] font-serif text-sm font-medium text-[#A98243]">
+                        {activeReview.number}
+                      </span>
+                    )}
+                    <GoldStars />
+                    <span className="ml-1 hidden font-serif text-xs uppercase tracking-[0.2em] text-[#87533E]/70 sm:inline">
+                      Client Story
+                    </span>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={() => setActiveReview(null)}
+                    aria-label="Close review details"
+                    className="
+                      group/close
+                      flex
+                      h-9
+                      w-9
+                      items-center
+                      justify-center
+                      rounded-full
+                      border
+                      border-[#CDA66F]/50
+                      bg-[#F8F3E8]
+                      text-[#87533E]
+                      transition-all
+                      duration-200
+                      hover:border-[#87533E]
+                      hover:bg-[#87533E]
+                      hover:text-[#FEFCF8]
+                      hover:scale-105
+                    "
+                  >
+                    <X size={16} strokeWidth={1.8} className="transition-transform duration-200 group-hover/close:rotate-90" />
+                  </button>
+                </div>
+
+                {/* Total Review Text */}
+                <div className="py-7 sm:py-8">
+                  <blockquote className="font-serif text-[19px] italic leading-[1.75] text-[#373535] sm:text-[21px] md:text-[22px]">
+                    “{activeReview.text}”
+                  </blockquote>
+                </div>
+
+                {/* Divider */}
+                <div className="mx-auto my-2 flex items-center justify-center gap-3">
+                  <span className="h-px w-14 bg-gradient-to-r from-transparent to-[#C5934D]/60" />
+                  <span className="text-xs text-[#C5934D]">❖</span>
+                  <span className="h-px w-14 bg-gradient-to-l from-transparent to-[#C5934D]/60" />
+                </div>
+
+                {/* Footer / Author */}
+                <div className="pt-4 text-center">
+                  <h3 id="active-review-author" className="font-serif text-2xl text-[#87533E] sm:text-3xl">
+                    {activeReview.author}
+                  </h3>
+                  {activeReview.type && (
+                    <p className="mt-1 text-[10px] uppercase tracking-[0.24em] text-[#A98243]">
+                      {activeReview.type}
+                    </p>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { HeroCards } from './HeroCards';
+import { GOOGLE_FORM_URL } from '@/components/BookingButton';
 
 export function Hero() {
   return (
@@ -330,8 +331,10 @@ export function Hero() {
             "
           >
             {/* Primary CTA */}
-            <Link
-              to="/sessions"
+            <a
+              href={GOOGLE_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="
                 group
                 h-[48px]
@@ -374,11 +377,11 @@ export function Hero() {
               >
                 ↗
               </span>
-            </Link>
+            </a>
 
             {/* Secondary CTA */}
             <Link
-              to="/about"
+              to="/sessions"
               className="
                 group
                 h-[48px]

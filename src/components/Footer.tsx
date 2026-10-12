@@ -148,15 +148,43 @@ export function Footer() {
             </span>
 
             {/* Links */}
-            {links.map((link) => (
-              <Link
-                key={link}
-                to={`/${link.toLowerCase().replace(/ /g, '-')}`}
-                className="block text-[#F2EFEB] text-[11px] my-[11px] transition-colors duration-200 hover:text-[#CDA66F]"
-              >
-                {link}
-              </Link>
-            ))}
+            {links.map((link) => {
+              if (link === 'Instagram') {
+                return (
+                  <a
+                    key={link}
+                    href="https://www.instagram.com/thegoldennumeralist009?vrfl=MXQ2MGxuczJmZWg0MA%3D%3D&utm_source=qr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-[#F2EFEB] text-[11px] my-[11px] transition-colors duration-200 hover:text-[#CDA66F]"
+                  >
+                    {link}
+                  </a>
+                );
+              }
+              if (link === 'WhatsApp') {
+                return (
+                  <a
+                    key={link}
+                    href="https://wa.me/971585636156"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-[#F2EFEB] text-[11px] my-[11px] transition-colors duration-200 hover:text-[#CDA66F]"
+                  >
+                    {link}
+                  </a>
+                );
+              }
+              return (
+                <Link
+                  key={link}
+                  to={`/${link.toLowerCase().replace(/ /g, '-')}`}
+                  className="block text-[#F2EFEB] text-[11px] my-[11px] transition-colors duration-200 hover:text-[#CDA66F]"
+                >
+                  {link}
+                </Link>
+              );
+            })}
           </div>
         ))}
       </div>

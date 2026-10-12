@@ -2,7 +2,6 @@ export const navItems: [string, string][] = [
   ['About', '/#about-us'],
   ['Sessions', '/sessions'],
   ['Numerology Tools', '/numerology-tools'],
-  ['Journal', '/journal'],
   ['Stories', '/stories'],
 ];
 
@@ -189,15 +188,14 @@ export const stories = [
 ];
 
 export const contactChannels: [string, string, string][] = [
-  ['Instagram', '@thegoldennumeralist', 'Instagram'],
-  ['YouTube', 'The Golden Numeralist', 'Youtube'],
-  ['WhatsApp', 'Available for online sessions', 'Play'],
+  ['Instagram', '@thegoldennumeralist009', 'Instagram'],
+  ['WhatsApp', '+971 58 563 6156', 'Play'],
 ];
 
 export const footerLinkGroups: [string, string[]][] = [
   ['Explore', ['About', 'Sessions', 'Numerology Tools']],
-  ['Read', ['Journal', 'Stories', 'Contact']],
-  ['Follow', ['Instagram', 'YouTube', 'WhatsApp']],
+  ['Read', ['Stories', 'Contact']],
+  ['Follow', ['Instagram', 'WhatsApp']],
 ];
 
 export const reveal = {

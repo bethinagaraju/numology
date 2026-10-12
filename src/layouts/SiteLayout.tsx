@@ -9,10 +9,9 @@ import { Sessions } from '@/pages/Sessions';
 import { SessionDetail } from '@/pages/SessionDetail';
 import { Tools } from '@/pages/Tools';
 import { ToolDetail } from '@/pages/ToolDetail';
-import { Journal } from '@/pages/Journal';
-import { Article } from '@/pages/Article';
 import { Stories } from '@/pages/Stories';
 import { Contact } from '@/pages/Contact';
+import { WhatsAppButton } from '@/components/WhatsAppButton';
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -48,8 +47,6 @@ export function SiteLayout() {
             <Route path="/comprehensive-package" element={<SessionDetail />} />
             <Route path="/numerology-tools" element={<Tools />} />
             <Route path="/numerology-tools/:tool" element={<ToolDetail />} />
-            <Route path="/journal" element={<Journal />} />
-            <Route path="/journal/:slug" element={<Article />} />
             <Route path="/stories" element={<Stories />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<Home />} />
@@ -57,6 +54,7 @@ export function SiteLayout() {
         </AnimatePresence>
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }

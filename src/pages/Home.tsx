@@ -7,7 +7,6 @@ import { ExploreSection } from '@/components/home/ExploreSection';
 import { SessionJourney } from '@/components/home/SessionJourney';
 import { Packages } from '@/components/home/Packages';
 import { StoriesPreview } from '@/components/home/StoriesPreview';
-import { JournalPreview } from '@/components/home/JournalPreview';
 import { FinalCta } from '@/components/FinalCta';
 import { AboutHero } from '@/components/home/AboutHero';
 import NumerologyServices from '@/components/home/NumerologyServices';
@@ -27,7 +26,6 @@ export function Home() {
       <SessionJourney />
       <Packages />
       <StoriesPreview />
-      {/* <JournalPreview /> */}
       <FinalCta />
     </>
   );

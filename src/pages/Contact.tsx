@@ -1,4 +1,4 @@
-import { Phone, Mail, Instagram, Youtube, MessageCircle, ArrowUpRight } from 'lucide-react';
+import { Phone, Mail, Instagram, MessageCircle, ArrowUpRight } from 'lucide-react';
 import { PageIntro } from '@/components/PageIntro';
 import founderImg from '@/assets/founder-2.png';
 
@@ -56,7 +56,7 @@ export function Contact() {
           <div className="space-y-2.5 border-t border-[#CDA66F]/25 pt-4">
             {/* Mobile / Phone */}
             <a
-              href="tel:+971501234567"
+              href="tel:+971585636156"
               className="flex items-center gap-3.5 p-3 md:p-3.5 rounded-[12px] border border-[#CDA66F]/30 bg-[#FDFBF7] transition-all duration-300 hover:border-[#C5934D] hover:shadow-[0_4px_15px_rgba(197,147,77,0.08)] group"
             >
               <div className="w-9 h-9 rounded-full border border-[#CDA66F]/50 flex items-center justify-center text-[#87533E] bg-[#FEFCF8] transition-colors group-hover:bg-[#87533E] group-hover:text-[#FDFBF7] shrink-0">
@@ -67,7 +67,7 @@ export function Contact() {
                   Direct Call / Mobile
                 </span>
                 <span className="font-serif text-[17px] md:text-[18px] text-[#2B211B] group-hover:text-[#87533E] transition-colors block truncate">
-                  +971 50 123 4567
+                  +971 58 563 6156
                 </span>
               </div>
               <ArrowUpRight size={15} className="text-[#C5934D] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0" />
@@ -75,7 +75,7 @@ export function Contact() {
 
             {/* Email Address */}
             <a
-              href="mailto:contact@thegoldennumeralist.com"
+              href="mailto:Namrata.lal123@gmail.com"
               className="flex items-center gap-3.5 p-3 md:p-3.5 rounded-[12px] border border-[#CDA66F]/30 bg-[#FDFBF7] transition-all duration-300 hover:border-[#C5934D] hover:shadow-[0_4px_15px_rgba(197,147,77,0.08)] group"
             >
               <div className="w-9 h-9 rounded-full border border-[#CDA66F]/50 flex items-center justify-center text-[#87533E] bg-[#FEFCF8] transition-colors group-hover:bg-[#87533E] group-hover:text-[#FDFBF7] shrink-0">
@@ -86,7 +86,7 @@ export function Contact() {
                   Email Address
                 </span>
                 <span className="font-serif text-[17px] md:text-[18px] text-[#2B211B] group-hover:text-[#87533E] transition-colors block truncate">
-                  contact@thegoldennumeralist.com
+                  Namrata.lal123@gmail.com
                 </span>
               </div>
               <ArrowUpRight size={15} className="text-[#C5934D] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0" />
@@ -94,7 +94,7 @@ export function Contact() {
 
             {/* WhatsApp Direct */}
             <a
-              href="https://wa.me/971501234567"
+              href="https://wa.me/971585636156"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3.5 p-3 md:p-3.5 rounded-[12px] border border-[#CDA66F]/30 bg-[#FDFBF7] transition-all duration-300 hover:border-[#C5934D] hover:shadow-[0_4px_15px_rgba(197,147,77,0.08)] group"
@@ -107,7 +107,7 @@ export function Contact() {
                   WhatsApp Direct
                 </span>
                 <span className="font-serif text-[17px] md:text-[18px] text-[#2B211B] group-hover:text-[#87533E] transition-colors block truncate">
-                  Chat with Namrattaa
+                  Chat on WhatsApp (+971 58 563 6156)
                 </span>
               </div>
               <ArrowUpRight size={15} className="text-[#C5934D] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0" />
@@ -119,20 +119,12 @@ export function Contact() {
             <span className="uppercase tracking-[0.14em] text-[9px] text-[#C5934D] font-medium">Follow</span>
             <div className="flex items-center gap-4">
               <a
-                href="https://instagram.com/thegoldennumeralist"
+                href="https://www.instagram.com/thegoldennumeralist009?vrfl=MXQ2MGxuczJmZWg0MA%3D%3D&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 transition-colors hover:text-[#87533E]"
               >
                 <Instagram size={13} /> Instagram
-              </a>
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1.5 transition-colors hover:text-[#87533E]"
-              >
-                <Youtube size={13} /> YouTube
               </a>
             </div>
           </div>
