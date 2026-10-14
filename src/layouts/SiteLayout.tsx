@@ -12,6 +12,7 @@ import { ToolDetail } from '@/pages/ToolDetail';
 import { Stories } from '@/pages/Stories';
 import { Contact } from '@/pages/Contact';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
+import { LaunchPopup } from '@/components/launch/LaunchPopup';
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -55,6 +56,7 @@ export function SiteLayout() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <LaunchPopup />
     </div>
   );
 }
