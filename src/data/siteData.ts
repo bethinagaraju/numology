@@ -36,9 +36,10 @@ export const packageData = [
     price: 'AED 150',
     focus: 'Core Foundations',
     items: [
-      'Life Path Number – Core Life Purpose',
-      'Destiny Number – Latent Talents',
-      'Current Personal Year Forecast',
+      'Personality Number',
+      'Destiny Number',
+      'Strengths and weaknesses',
+      'Latent talents',
       'Basic Remedies'
     ]
   },
@@ -47,12 +48,14 @@ export const packageData = [
     price: 'AED 300',
     focus: 'Essential Life Pillars',
     items: [
-      'All topics in Basic Package',
-      'Life Path Number – Core Life Purpose',
-      'Destiny Number – Latent Talents',
-      'Current Personal Year Forecast',
+      // 'Personality Number',
+      // 'Destiny Number',
+      // 'Strengths and weaknesses',
+      // 'Latent talents',
+      // 'Basic Remedies',
+      'All topics in Basic',
       'Career & Financial Outlook',
-      'Yogas in Numerology',
+      'Know your Yogas in numerology',
       'Key Health Concerns',
       'Advanced Remedies'
     ]
@@ -62,10 +65,19 @@ export const packageData = [
     price: 'AED 500',
     focus: 'Complete Personal Alignment',
     items: [
-      'All topics from Detailed Package',
+      // 'Personality Number',
+      // 'Destiny Number',
+      // 'Strengths and weaknesses',
+      // 'Latent talents',
+      // 'Basic Remedies',
+      // 'Career & Financial Outlook',
+      // 'Know your Yogas in numerology',
+      // 'Key Health Concerns',
+      // 'Advanced Remedies',
+      'All topics in Detailed',
       'Complete Name Spelling Analysis & Correction',
-      'Marriage Compatibility',
-      'Mobile & Vehicle Number Compatibility'
+      'Mobile & Vehicle Number Compatibility',
+      'Upcoming personal year calculation'
     ]
   },
 ];

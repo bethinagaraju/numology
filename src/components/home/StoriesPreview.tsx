@@ -665,6 +665,17 @@ const reviews = [
     author: "Anita V.",
     // type: "Remedies & Guidance"
   },
+  {
+    "text": "I really enjoyed my numerology session with Namrattaa. She gave me deep and insightful perspectives about my personality, traits, and different aspects of my life. The session helped me understand myself better and gave me a fresh perspective. Thank you, Namrattaa, for such an insightful and enriching experience! 🙏✨",
+    "author": "Vansh",
+    "type": "testimonial"
+  },
+
+  {
+    "text": "Thank you for the amazing session! ❤️ It was really interesting to understand how numbers can have so much meaning and connection. A lot of your explanations genuinely made sense and were relatable. So good to know all of this!",
+    "author": "Tanvi",
+    "type": "testimonial"
+  }
   // {
   //   text: "Understanding my personal year number helped me stop fighting against the current and start flowing.",
   //   author: "Marcus J.",
@@ -882,21 +893,25 @@ export function StoriesPreview() {
                     {currentReview.author}
                   </p>
 
-                  <span className="text-[#C5934D] text-[10px]">
-                    ·
-                  </span>
+                  {currentReview.type && (
+                    <>
+                      <span className="text-[#C5934D] text-[10px]">
+                        ·
+                      </span>
 
-                  <p
-                    className="
-                      text-[#87533E]
-                      text-[10px]
-                      uppercase
-                      tracking-[0.13em]
-                      font-medium
-                    "
-                  >
-                    {currentReview.type}
-                  </p>
+                      <p
+                        className="
+                          text-[#87533E]
+                          text-[10px]
+                          uppercase
+                          tracking-[0.13em]
+                          font-medium
+                        "
+                      >
+                        {currentReview.type}
+                      </p>
+                    </>
+                  )}
                 </div>
               </motion.div>
             </AnimatePresence>

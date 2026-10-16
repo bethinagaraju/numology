@@ -168,7 +168,7 @@ export function Hero() {
             </div>
 
             {/* Brand */}
-            <h2
+            <p
               className="
                 font-serif
                 text-[#363637]
@@ -184,7 +184,7 @@ export function Hero() {
               "
             >
               THE GOLDEN NUMERALIST
-            </h2>
+            </p>
 
             {/* Name */}
             <h1
@@ -267,7 +267,7 @@ export function Hero() {
           {/* =================================================
               MAIN HEADLINE
               ================================================= */}
-          <h3
+          <h2
             className="
               !font-sans
               font-normal
@@ -287,7 +287,7 @@ export function Hero() {
             Guided by numbers,{' '}
             <br className="hidden sm:inline" />
             empowered by inner insight.
-          </h3>
+          </h2>
 
           {/* =================================================
               DESCRIPTION

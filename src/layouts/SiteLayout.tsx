@@ -11,8 +11,9 @@ import { Tools } from '@/pages/Tools';
 import { ToolDetail } from '@/pages/ToolDetail';
 import { Stories } from '@/pages/Stories';
 import { Contact } from '@/pages/Contact';
+import { NotFound } from '@/pages/NotFound';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
-import { LaunchPopup } from '@/components/launch/LaunchPopup';
+import { SEOHead } from '@/components/SEOHead';
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -34,6 +35,7 @@ function ScrollToTop() {
 export function SiteLayout() {
   return (
     <div className="overflow-hidden">
+      <SEOHead />
       <ScrollToTop />
       <Navbar />
       <main>
@@ -50,13 +52,12 @@ export function SiteLayout() {
             <Route path="/numerology-tools/:tool" element={<ToolDetail />} />
             <Route path="/stories" element={<Stories />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
       </main>
       <Footer />
       <WhatsAppButton />
-      <LaunchPopup />
     </div>
   );
 }

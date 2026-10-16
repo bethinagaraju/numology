@@ -1,6 +1,6 @@
 import { Phone, Mail, Instagram, MessageCircle, ArrowUpRight } from 'lucide-react';
 import { PageIntro } from '@/components/PageIntro';
-import founderImg from '@/assets/founder-2.png';
+import founderImg from '@/assets/founder-2.jpg';
 
 export function Contact() {
   return (
@@ -75,7 +75,7 @@ export function Contact() {
 
             {/* Email Address */}
             <a
-              href="mailto:Namrata.lal123@gmail.com"
+              href="mailto:Namrattaalal@gmail.com"
               className="flex items-center gap-3.5 p-3 md:p-3.5 rounded-[12px] border border-[#CDA66F]/30 bg-[#FDFBF7] transition-all duration-300 hover:border-[#C5934D] hover:shadow-[0_4px_15px_rgba(197,147,77,0.08)] group"
             >
               <div className="w-9 h-9 rounded-full border border-[#CDA66F]/50 flex items-center justify-center text-[#87533E] bg-[#FEFCF8] transition-colors group-hover:bg-[#87533E] group-hover:text-[#FDFBF7] shrink-0">
@@ -86,7 +86,7 @@ export function Contact() {
                   Email Address
                 </span>
                 <span className="font-serif text-[17px] md:text-[18px] text-[#2B211B] group-hover:text-[#87533E] transition-colors block truncate">
-                  Namrata.lal123@gmail.com
+                  Namrattaalal@gmail.com
                 </span>
               </div>
               <ArrowUpRight size={15} className="text-[#C5934D] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0" />

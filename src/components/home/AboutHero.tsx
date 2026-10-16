@@ -432,7 +432,7 @@ export function AboutHero() {
                 ================================================= */}
             <motion.img
               src={IMAGE_URL}
-              alt="Namrattaa Lal"
+              alt="Namrattaa Lal - Master Numerologist and Founder of The Golden Numeralist"
               initial={{ y: 25, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}

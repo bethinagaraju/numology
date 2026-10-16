@@ -25,7 +25,7 @@ const faqData: FAQItem[] = [
   {
     category: "Packages",
     question: "Which consultation package should I choose?",
-    answer: "We offer three carefully structured consultation tiers to suit your needs:\n• Basic Package (AED 150): Covers your core foundations—Life Path Number, Destiny Number, current Personal Year forecast, and basic remedies.\n• Detailed Package (AED 300): Our most popular session, exploring career direction, financial outlook, yogas in numerology, key health tendencies, and advanced remedies.\n• Comprehensive Package (AED 500): Complete personal alignment including full name spelling analysis & correction, marriage/relationship compatibility, and mobile & vehicle number compatibility."
+    answer: "We offer three carefully structured consultation tiers to suit your needs:\n• Basic Package: Covers your core foundations— Personality Number, Destiny Number, current Personal Year forecast, and basic remedies.\n• Detailed Package: Our most popular session, exploring career direction, financial outlook, yogas in numerology, key health tendencies, and advanced remedies.\n• Comprehensive Package: Complete personal alignment including full name spelling analysis & correction, marriage/relationship compatibility, and mobile & vehicle number compatibility."
   },
   {
     category: "Preparation",

@@ -1,16 +1,16 @@
 import { Sparkles } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import founderImg from '../../assets/founder.png';
-import card1Img from '../../assets/card1.png';
-import card2Img from '../../assets/card2.png';
-import card3Img from '../../assets/card3.png';
-import card4Img from '../../assets/card4.png';
-import card5Img from '../../assets/card5.png';
-import card6Img from '../../assets/card6.png';
-import card7Img from '../../assets/card7.png';
-import card8Img from '../../assets/card8.png';
-import card9Img from '../../assets/card9.png';
+import founderImg from '../../assets/founder.jpg';
+import card1Img from '../../assets/card1.webp';
+import card2Img from '../../assets/card2.webp';
+import card3Img from '../../assets/card3.webp';
+import card4Img from '../../assets/card4.webp';
+import card5Img from '../../assets/card5.webp';
+import card6Img from '../../assets/card6.webp';
+import card7Img from '../../assets/card7.webp';
+import card8Img from '../../assets/card8.webp';
+import card9Img from '../../assets/card9.webp';
 
 const cardImages: Record<number, string> = {
   1: card1Img,
@@ -51,6 +51,10 @@ export function HeroCards() {
   }, []);
 
   useEffect(() => {
+    // Eager preload founder image so it renders immediately upon landing
+    const img = new Image();
+    img.src = founderImg;
+
     const interval = setInterval(() => {
       setNum((prev) => (prev + 1) % 10);
     }, 3000);
@@ -161,7 +165,10 @@ export function HeroCards() {
               <>
                 <img
                   src={founderImg}
-                  alt="Founder"
+                  alt="Namrattaa Lal - Master Numerologist and Founder of The Golden Numeralist"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   className="absolute inset-0 w-full h-full object-cover opacity-100 z-0"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-[#3D2B1F]/90 via-[#3D2B1F]/30 to-[#241710]/95 z-0" />
@@ -200,7 +207,7 @@ export function HeroCards() {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120px] h-[120px] xs:w-[135px] xs:h-[135px] sm:w-[155px] sm:h-[155px] md:w-[165px] md:h-[165px] flex items-center justify-center z-20 pointer-events-none">
                   <img
                     src={cardImages[nextNum]}
-                    alt={`Card ${nextNum}`}
+                    alt={`Lo Shu Numerology Driver Number ${nextNum} - ${numberData[nextNum]?.title || 'Card'}`}
                     className="w-full h-full object-contain filter drop-shadow-[0_8px_20px_rgba(197,147,77,0.30)] select-none"
                   />
                 </div>
@@ -328,7 +335,10 @@ export function HeroCards() {
               <>
                 <img
                   src={founderImg}
-                  alt="Founder"
+                  alt="Namrattaa Lal - Master Numerologist and Founder of The Golden Numeralist"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   className="absolute inset-0 w-full h-full object-cover z-0"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-[#3D2B1F]/10 via-[#3D2B1F]/30 to-[#241710]/95 z-0" />
@@ -367,7 +377,7 @@ export function HeroCards() {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[130px] h-[130px] xs:w-[145px] xs:h-[145px] sm:w-[165px] sm:h-[165px] md:w-[175px] md:h-[175px] flex items-center justify-center z-20 pointer-events-none">
                   <img
                     src={cardImages[num]}
-                    alt={`Card ${num}`}
+                    alt={`Lo Shu Numerology Driver Number ${num} - ${numberData[num]?.title || 'Card'}`}
                     className="w-full h-full object-contain filter drop-shadow-[0_10px_25px_rgba(197,147,77,0.35)] select-none transition-transform duration-500 hover:scale-105"
                   />
                 </div>

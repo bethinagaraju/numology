@@ -393,7 +393,39 @@ const reviews: ReviewItem[] = [
     "text": "Did a wonderful Numerology session with Namrattaa Lal ❤️ Was quite amazed by your knowledge",
     "author": "Kanika",
     "type": "testimonial"
+  },
+  {
+    "text": "I recently had a numerology session with Namrattaa, and I must say it was an incredibly insightful experience. What impressed me the most was the depth of her knowledge and the way she clearly explained each and every number, along with the science and reasoning behind it. It wasn’t just about telling me what the numbers indicate — she helped me understand why they matter and how they connect with our personality, characteristics and life journey. I could genuinely relate to so many of the observations and outcomes, especially when it came to my own personality traits, strengths and certain gaps I need to work on. The best part was the way she used real-life examples throughout the session, which made everything so easy to understand and kept the entire conversation extremely engaging and interesting. I would highly recommend connecting with Namrattaa if you are curious to understand yourself better — your characteristics, strengths, behavioural traits and areas where you can improve. Thank you, Namrattaa, for such an insightful and engaging session! 🙏✨ ",
+    "author": "Ashis",
+    "type": "testimonial"
+  },
+
+  {
+    "text": "मैं आपका बड़ा शुक्रगुजार हूं। हम रविवार 29/09/2026 को जब मिले, तब आपने अपने ज्ञान न्यूमेरोलॉजी साइंस द्वारा, जो भी मुश्किलें मेरे जीवन में आ रही थीं, उनसे मुझे रूबरू करवाया, मेरी हिम्मत बढ़ाई, और उनका समाधान बताया। और आपने जो उपाय बताए, वह इतने सरल हैं, कि जिन्हें मैं अपने रोजाना के कार्य में शामिल कर सकता हूं, और अपने आने वाले जीवन को सफल बना सकता हूं। मैं आपके द्वारा दी गई सलाह को अमल में लाकर जीवन को शांति तथा समृद्धि से भरपूर कर सकता हूं। आपका आपका बहुत-बहुत धन्यवाद 🙏🙏 मैं बड़ा खुशनसीब हूं मेरे जीवन में आप जैसी बड़ी हैं जिनकी सलाह से मैं अपने जीवन को समृद्ध और सफल बना सकता हूं!",
+    "author": "पंकज",
+    "type": "testimonial"
+  },
+
+  {
+    "text": "I had a wonderful session with Namrattaa and truly found it insightful and meaningful. She is extremely knowledgeable and explained everything so clearly, precisely, and in such a lovely way. The session helped me understand my personality, strengths, and certain aspects of myself on a much deeper level. What I especially appreciated was how she guided me on how to work with these qualities and challenges to create more balance and harmony in my life. I came away with a much better understanding of myself and some really valuable perspectives to reflect on. Highly recommend her for anyone looking for an insightful and well explained numerology session!",
+    "author": "Grateful Client",
+    "type": "testimonial"
+  },
+
+  {
+    "text": "I really enjoyed my numerology session with Namrattaa. She gave me deep and insightful perspectives about my personality, traits, and different aspects of my life. The session helped me understand myself better and gave me a fresh perspective. Thank you, Namrattaa, for such an insightful and enriching experience! 🙏✨",
+    "author": "Vansh",
+    "type": "testimonial"
+  },
+
+
+  {
+    "text": "Thank you for the amazing session! ❤️ It was really interesting to understand how numbers can have so much meaning and connection. A lot of your explanations genuinely made sense and were relatable. So good to know all of this!",
+    "author": "Tanvi",
+    "type": "testimonial"
   }
+
+
 ];
 
 const GoldStars = ({ small = false }: { small?: boolean }) => (

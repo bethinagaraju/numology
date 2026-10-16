@@ -113,7 +113,7 @@ export function Navbar() {
         >
           <img
             src={logoImg}
-            alt="The Golden Numeralist"
+            alt="The Golden Numeralist - Namrattaa Lal Numerology Logo"
             className="
               h-[42px]
               sm:h-[50px]
