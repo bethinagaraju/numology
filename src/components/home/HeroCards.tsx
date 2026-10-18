@@ -25,7 +25,7 @@ const cardImages: Record<number, string> = {
 };
 
 const numberData: Record<number, { title: string; subtitle: string; dates: string }> = {
-  0: { title: "NAMRATA LAL", subtitle: "FOUNDER", dates: "MASTER NUMEROLOGIST" },
+  0: { title: "NAMRATTAA LAL", subtitle: "FOUNDER", dates: "MASTER NUMEROLOGIST" },
   1: { title: "THE LEADER", subtitle: "INDEPENDENCE • INNOVATION", dates: "01 • 10 • 19" },
   2: { title: "THE PEACEMAKER", subtitle: "HARMONY • INTUITION", dates: "02 • 11 • 20" },
   3: { title: "THE CREATOR", subtitle: "CREATIVITY • EXPRESSION", dates: "03 • 12 • 21" },
