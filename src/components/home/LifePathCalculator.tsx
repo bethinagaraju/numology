@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import lifepathBg from '@/assets/lifepathbg.png';
+import lifepathBg from '@/assets/lifepathbg.webp';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
 

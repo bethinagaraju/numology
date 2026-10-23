@@ -33,7 +33,7 @@ export const journeySteps = [
 export const packageData = [
   {
     name: 'Basic Package',
-    price: 'AED 150',
+
     focus: 'Core Foundations',
     items: [
       'Personality Number',
@@ -45,7 +45,7 @@ export const packageData = [
   },
   {
     name: 'Detailed Package',
-    price: 'AED 300',
+
     focus: 'Essential Life Pillars',
     items: [
       // 'Personality Number',
@@ -62,7 +62,7 @@ export const packageData = [
   },
   {
     name: 'Comprehensive Package',
-    price: 'AED 500',
+
     focus: 'Complete Personal Alignment',
     items: [
       // 'Personality Number',
@@ -201,13 +201,14 @@ export const stories = [
 
 export const contactChannels: [string, string, string][] = [
   ['Instagram', '@thegoldennumeralist009', 'Instagram'],
-  ['WhatsApp', '+971 58 563 6156', 'Play'],
+  ['WhatsApp (UAE)', '+971 58 563 6156', 'Play'],
+  ['WhatsApp (India)', '+91 98107 89604', 'Play'],
 ];
 
 export const footerLinkGroups: [string, string[]][] = [
   ['Explore', ['About', 'Sessions', 'Numerology Tools']],
   ['Read', ['Stories', 'Contact']],
-  ['Follow', ['Instagram', 'WhatsApp']],
+  ['Follow', ['Instagram', 'WhatsApp (UAE)', 'WhatsApp (India)']],
 ];
 
 export const reveal = {

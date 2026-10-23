@@ -4,7 +4,7 @@ import { AnimatePresence, motion, type Variants } from 'framer-motion';
 import { Menu, X, ArrowUpRight, ChevronRight } from 'lucide-react';
 import { BookingButton, GOOGLE_FORM_URL } from './BookingButton';
 import { navItems } from '@/data/siteData';
-import logoImg from '@/assets/ChatGPT Image Oct 4, 2026, 02_58_43 PM.png';
+import logoImg from '@/assets/lotus-logo.webp';
 
 const allMobileNavItems: [string, string][] = [
   ['Home', '/'],
@@ -113,7 +113,7 @@ export function Navbar() {
         >
           <img
             src={logoImg}
-            alt="The Golden Numeralist - Namrattaa Lal Numerology Logo"
+            alt="Namratta Lal - The Golden Numeralist Lotus Logo"
             className="
               h-[42px]
               sm:h-[50px]

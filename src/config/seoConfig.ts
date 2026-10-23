@@ -15,20 +15,21 @@ export const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.png`;
 
 export const staticPageSEO: Record<string, PageSEO> = {
   '/': {
-    title: 'The Golden Numeralist | Namrattaa Lal — Master Numerologist in India & UAE',
-    description: 'Personalized numerology consultations by Namrattaa Lal (The Golden Numeralist). Discover your Life Path, Lo Shu Grid, and name vibrations for career, business, and life clarity.',
+    title: 'Namratta Lal - The Golden Numeralist | Online Numerology Readings Worldwide',
+    description: 'Online numerology readings worldwide with Namratta Lal (The Golden Numeralist). Discover your Life Path, Lo Shu Grid, and name vibrations for personal clarity.',
     canonicalPath: '/',
     keywords: [
+      'Namratta Lal',
+      'The Golden Numeralist',
+      'Online Numerology Readings Worldwide',
+      'Online numerology reading',
       'Numerologist in India',
       'Numerologist in UAE',
       'Numerology consultation',
       'Personal numerology reading',
       'Name numerology analysis',
       'Numerology expert',
-      'Numerology consultation online',
-      'Lo Shu Grid numerology consultation',
-      'Namrattaa Lal',
-      'The Golden Numeralist'
+      'Lo Shu Grid numerology consultation'
     ],
     breadcrumbs: [
       { name: 'Home', path: '/' }

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import IMAGE_URL from "../../assets/founder-about.png";
+import IMAGE_URL from "../../assets/founder-about.webp";
 import { GOOGLE_FORM_URL } from "@/components/BookingButton";
 
 const circleText =

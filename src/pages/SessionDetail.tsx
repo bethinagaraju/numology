@@ -1,11 +1,11 @@
 import { useParams, useLocation, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { PageIntro } from '@/components/PageIntro';
 import { BookingButton } from '@/components/BookingButton';
 
 // Animation variants for smooth luxury staggered entrance
-const listContainerVariants = {
+const listContainerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -16,7 +16,7 @@ const listContainerVariants = {
   },
 };
 
-const listItemVariants = {
+const listItemVariants: Variants = {
   hidden: { opacity: 0, x: -14, y: 4 },
   visible: {
     opacity: 1,
@@ -24,7 +24,7 @@ const listItemVariants = {
     y: 0,
     transition: {
       duration: 0.45,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
     },
   },
 };
@@ -47,7 +47,7 @@ export const sessionPackages: Record<string, SessionPackage> = {
   'basic-package': {
     slug: 'basic-package',
     title: 'Basic Package',
-    price: 'AED 150',
+
     text: 'A focused beginning for exploring your core numerology foundations.',
     focus: 'Core Foundations',
     items: [
@@ -67,7 +67,7 @@ export const sessionPackages: Record<string, SessionPackage> = {
   'detailed-package': {
     slug: 'detailed-package',
     title: 'Detailed Package',
-    price: 'AED 300',
+
     text: 'A deeper conversation across the essential pillars of your personal map.',
     focus: 'Essential Life Pillars',
     items: [
@@ -85,7 +85,7 @@ export const sessionPackages: Record<string, SessionPackage> = {
   'comprehensive-package': {
     slug: 'comprehensive-package',
     title: 'Comprehensive Package',
-    price: 'AED 500',
+
     text: 'A complete alignment session for a fuller, more considered perspective.',
     focus: 'Complete Personal Alignment',
     items: [

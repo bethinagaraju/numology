@@ -115,10 +115,10 @@ export function SEOHead({ customSEO }: SEOHeadProps = {}) {
       const slug = pathname.replace('/numerology-tools/', '');
       // Handle tool aliases canonicalizing to canonical tool slug
       const canonicalSlug = slug === 'personality' ? 'personality-number' :
-                            slug === 'destiny' ? 'destiny-number' :
-                            slug === 'kua-number' ? 'aura-kua-number' :
-                            slug === 'name-number' ? 'name-numerology' :
-                            slug === 'personal-year' ? 'personal-year-numerology' : slug;
+        slug === 'destiny' ? 'destiny-number' :
+          slug === 'kua-number' ? 'aura-kua-number' :
+            slug === 'name-number' ? 'name-numerology' :
+              slug === 'personal-year' ? 'personal-year-numerology' : slug;
       const tool = toolSEO[canonicalSlug] || {
         title: 'Numerology Tool Guide | The Golden Numeralist',
         description: 'Numerology calculation and interpretive guide by Namrattaa Lal.'
