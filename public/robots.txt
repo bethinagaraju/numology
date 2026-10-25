@@ -1,8 +1,8 @@
-# robots.txt for https://namrattalal.com/
+# robots.txt for https://namrattaa.com/
 # The Golden Numeralist - Namrattaa Lal
 
 User-agent: *
 Allow: /
 
 # Canonical XML Sitemap
-Sitemap: https://namrattalal.com/sitemap.xml
+Sitemap: https://namrattaa.com/sitemap.xml
