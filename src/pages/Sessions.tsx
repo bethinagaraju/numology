@@ -23,7 +23,11 @@ export function Sessions() {
               <h2 className="font-serif font-medium text-[32px] leading-none mb-[15px]">{pkg.title}</h2>
               <p className="text-[#363637] text-[13px] leading-[1.6] mb-[30px] flex-1">{pkg.text}</p>
               <div className="flex items-center justify-between mt-auto">
-                <span className="font-serif text-[18px] text-bronze">{pkg.price}</span>
+                {pkg.price ? (
+                  <span className="font-serif text-[18px] text-bronze">{pkg.price}</span>
+                ) : (
+                  <span />
+                )}
                 <b className="flex items-center gap-[8px] text-[10px] font-semibold uppercase tracking-[0.12em] text-bronze">Explore <ArrowRight size={14} /></b>
               </div>
             </Link>

@@ -53,29 +53,96 @@ export function Contact() {
           </p>
 
           {/* Contact Methods List */}
-          <div className="space-y-2.5 border-t border-[#CDA66F]/25 pt-4">
-            {/* Mobile / Phone */}
+          <div className="space-y-3 border-t border-[#CDA66F]/25 pt-4">
+            {/* WhatsApp Direct - UAE */}
             <a
-              href="tel:+971585636156"
-              className="flex items-center gap-3.5 p-3 md:p-3.5 rounded-[12px] border border-[#CDA66F]/30 bg-[#FDFBF7] transition-all duration-300 hover:border-[#C5934D] hover:shadow-[0_4px_15px_rgba(197,147,77,0.08)] group"
+              href="https://wa.me/971585636156?text=Hello%20Namrattaa%2C%20I%20would%20like%20to%20inquire%20about%20a%20numerology%20session."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3.5 p-3 md:p-3.5 rounded-[12px] border border-[#25D366]/40 bg-[#F6FBF7] transition-all duration-300 hover:border-[#25D366] hover:shadow-[0_4px_18px_rgba(37,211,102,0.12)] group"
             >
-              <div className="w-9 h-9 rounded-full border border-[#CDA66F]/50 flex items-center justify-center text-[#87533E] bg-[#FEFCF8] transition-colors group-hover:bg-[#87533E] group-hover:text-[#FDFBF7] shrink-0">
-                <Phone size={16} strokeWidth={1.5} />
+              <div className="w-10 h-10 rounded-full border border-[#25D366]/50 flex items-center justify-center text-white bg-[#25D366] transition-transform group-hover:scale-105 shrink-0 shadow-sm">
+                <MessageCircle size={18} strokeWidth={2} />
               </div>
               <div className="flex-1 min-w-0">
-                <span className="text-[9px] uppercase tracking-[0.16em] text-[#C5934D] font-semibold block leading-tight">
-                  Direct Call / Mobile
-                </span>
-                <span className="font-serif text-[17px] md:text-[18px] text-[#2B211B] group-hover:text-[#87533E] transition-colors block truncate">
+                <div className="flex items-center gap-2">
+                  <span className="text-[9px] uppercase tracking-[0.16em] text-[#1E7E34] font-semibold block leading-tight">
+                    WhatsApp (UAE & Intl)
+                  </span>
+                  <span className="text-[10px] px-1.5 py-0.2 rounded bg-[#25D366]/15 text-[#1b6b2c] font-medium">
+                    🇦🇪 00971
+                  </span>
+                </div>
+                <span className="font-serif text-[17px] md:text-[18px] text-[#2B211B] group-hover:text-[#1E7E34] transition-colors block truncate font-medium">
                   +971 58 563 6156
                 </span>
+                <span className="text-[11px] text-[#666] block">
+                  Click to chat directly on WhatsApp
+                </span>
               </div>
-              <ArrowUpRight size={15} className="text-[#C5934D] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0" />
+              <ArrowUpRight size={16} className="text-[#1E7E34] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0" />
             </a>
+
+            {/* WhatsApp Direct - India */}
+            <a
+              href="https://wa.me/919810789604?text=Hello%20Namrattaa%2C%20I%20would%20like%20to%20inquire%20about%20a%20numerology%20session."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3.5 p-3 md:p-3.5 rounded-[12px] border border-[#25D366]/40 bg-[#F6FBF7] transition-all duration-300 hover:border-[#25D366] hover:shadow-[0_4px_18px_rgba(37,211,102,0.12)] group"
+            >
+              <div className="w-10 h-10 rounded-full border border-[#25D366]/50 flex items-center justify-center text-white bg-[#25D366] transition-transform group-hover:scale-105 shrink-0 shadow-sm">
+                <MessageCircle size={18} strokeWidth={2} />
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2">
+                  <span className="text-[9px] uppercase tracking-[0.16em] text-[#1E7E34] font-semibold block leading-tight">
+                    WhatsApp (India)
+                  </span>
+                  <span className="text-[10px] px-1.5 py-0.2 rounded bg-[#25D366]/15 text-[#1b6b2c] font-medium">
+                    🇮🇳 0091
+                  </span>
+                </div>
+                <span className="font-serif text-[17px] md:text-[18px] text-[#2B211B] group-hover:text-[#1E7E34] transition-colors block truncate font-medium">
+                  +91 98107 89604
+                </span>
+                <span className="text-[11px] text-[#666] block">
+                  Click to chat directly on WhatsApp
+                </span>
+              </div>
+              <ArrowUpRight size={16} className="text-[#1E7E34] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0" />
+            </a>
+
+            {/* Direct Call / Mobile Numbers */}
+            {/* <div className="p-3 md:p-3.5 rounded-[12px] border border-[#CDA66F]/30 bg-[#FDFBF7]">
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-7 h-7 rounded-full border border-[#CDA66F]/50 flex items-center justify-center text-[#87533E] bg-[#FEFCF8] shrink-0">
+                  <Phone size={13} strokeWidth={1.5} />
+                </div>
+                <span className="text-[9px] uppercase tracking-[0.16em] text-[#C5934D] font-semibold block leading-tight">
+                  Direct Phone Call
+                </span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-9">
+                <a
+                  href="tel:+971585636156"
+                  className="flex items-center justify-between p-2 rounded-lg bg-[#FEFCF8] border border-[#CDA66F]/20 text-[#2B211B] hover:text-[#87533E] hover:border-[#87533E]/40 transition-colors text-[13px] font-serif"
+                >
+                  <span>🇦🇪 +971 58 563 6156</span>
+                  <ArrowUpRight size={12} className="text-[#C5934D]" />
+                </a>
+                <a
+                  href="tel:+919810789604"
+                  className="flex items-center justify-between p-2 rounded-lg bg-[#FEFCF8] border border-[#CDA66F]/20 text-[#2B211B] hover:text-[#87533E] hover:border-[#87533E]/40 transition-colors text-[13px] font-serif"
+                >
+                  <span>🇮🇳 +91 98107 89604</span>
+                  <ArrowUpRight size={12} className="text-[#C5934D]" />
+                </a>
+              </div>
+            </div> */}
 
             {/* Email Address */}
             <a
-              href="mailto:Namrattaalal@gmail.com"
+              href="mailto:Info@Namrattaa.com"
               className="flex items-center gap-3.5 p-3 md:p-3.5 rounded-[12px] border border-[#CDA66F]/30 bg-[#FDFBF7] transition-all duration-300 hover:border-[#C5934D] hover:shadow-[0_4px_15px_rgba(197,147,77,0.08)] group"
             >
               <div className="w-9 h-9 rounded-full border border-[#CDA66F]/50 flex items-center justify-center text-[#87533E] bg-[#FEFCF8] transition-colors group-hover:bg-[#87533E] group-hover:text-[#FDFBF7] shrink-0">
@@ -85,29 +152,8 @@ export function Contact() {
                 <span className="text-[9px] uppercase tracking-[0.16em] text-[#C5934D] font-semibold block leading-tight">
                   Email Address
                 </span>
-                <span className="font-serif text-[17px] md:text-[18px] text-[#2B211B] group-hover:text-[#87533E] transition-colors block truncate">
-                  Namrattaalal@gmail.com
-                </span>
-              </div>
-              <ArrowUpRight size={15} className="text-[#C5934D] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0" />
-            </a>
-
-            {/* WhatsApp Direct */}
-            <a
-              href="https://wa.me/971585636156"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3.5 p-3 md:p-3.5 rounded-[12px] border border-[#CDA66F]/30 bg-[#FDFBF7] transition-all duration-300 hover:border-[#C5934D] hover:shadow-[0_4px_15px_rgba(197,147,77,0.08)] group"
-            >
-              <div className="w-9 h-9 rounded-full border border-[#CDA66F]/50 flex items-center justify-center text-[#87533E] bg-[#FEFCF8] transition-colors group-hover:bg-[#87533E] group-hover:text-[#FDFBF7] shrink-0">
-                <MessageCircle size={16} strokeWidth={1.5} />
-              </div>
-              <div className="flex-1 min-w-0">
-                <span className="text-[9px] uppercase tracking-[0.16em] text-[#C5934D] font-semibold block leading-tight">
-                  WhatsApp Direct
-                </span>
-                <span className="font-serif text-[17px] md:text-[18px] text-[#2B211B] group-hover:text-[#87533E] transition-colors block truncate">
-                  Chat on WhatsApp (+971 58 563 6156)
+                <span className="font-serif text-[16px] md:text-[17px] text-[#2B211B] group-hover:text-[#87533E] transition-colors block truncate">
+                  Info@Namrattaa.com
                 </span>
               </div>
               <ArrowUpRight size={15} className="text-[#C5934D] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0" />

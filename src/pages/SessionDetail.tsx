@@ -37,7 +37,7 @@ const listItemVariants: Variants = {
 export interface SessionPackage {
   slug: string;
   title: string;
-  price: string;
+  price?: string;
   text: string;
   focus?: string;
   items: string[];

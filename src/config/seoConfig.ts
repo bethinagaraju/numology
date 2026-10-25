@@ -205,7 +205,7 @@ export const staticPageSEO: Record<string, PageSEO> = {
   },
   '/contact': {
     title: 'Contact Namrattaa Lal | Book a Numerology Consultation — UAE & India',
-    description: 'Get in touch with Namrattaa Lal. Book a private online numerology consultation via WhatsApp, phone (+971 58 563 6156), or email (Namrattaalal@gmail.com).',
+    description: 'Get in touch with Namrattaa Lal. Book a private online numerology consultation via WhatsApp (+971 58 563 6156 / +91 98107 89604) or email (Namrattaalal@gmail.com).',
     canonicalPath: '/contact',
     keywords: [
       'Contact Namrattaa Lal',

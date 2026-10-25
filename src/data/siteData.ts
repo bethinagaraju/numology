@@ -82,10 +82,33 @@ export const packageData = [
   },
 ];
 
-export const packages = [
+export const packages: { slug: string; title: string; text: string; price?: string }[] = [
   { slug: 'basic-package', title: 'Basic Package', text: 'A focused beginning for exploring your core numerology foundations.' },
   { slug: 'detailed-package', title: 'Detailed Package', text: 'A deeper conversation across the essential pillars of your personal map.' },
   { slug: 'comprehensive-package', title: 'Comprehensive Package', text: 'A complete alignment session for a fuller, more considered perspective.' },
+];
+
+export const whatsappContacts = [
+  {
+    country: 'UAE & International',
+    code: 'UAE',
+    flag: '🇦🇪',
+    display: '+971 58 563 6156',
+    intlFormat: '00971-585636156',
+    cleanNumber: '971585636156',
+    waUrl: 'https://wa.me/971585636156?text=Hello%20Namrattaa%2C%20I%20would%20like%20to%20inquire%20about%20a%20numerology%20session.',
+    telUrl: 'tel:+971585636156',
+  },
+  {
+    country: 'India',
+    code: 'India',
+    flag: '🇮🇳',
+    display: '+91 98107 89604',
+    intlFormat: '0091-9810789604',
+    cleanNumber: '919810789604',
+    waUrl: 'https://wa.me/919810789604?text=Hello%20Namrattaa%2C%20I%20would%20like%20to%20inquire%20about%20a%20numerology%20session.',
+    telUrl: 'tel:+919810789604',
+  },
 ];
 
 export const serviceTypes = [

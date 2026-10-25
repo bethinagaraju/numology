@@ -162,7 +162,45 @@ export function Footer() {
                   </a>
                 );
               }
-              if (link === 'WhatsApp') {
+              if (link.includes('WhatsApp (UAE)')) {
+                return (
+                  <a
+                    key={link}
+                    href="https://wa.me/971585636156?text=Hello%20Namrattaa%2C%20I%20would%20like%20to%20inquire%20about%20a%20numerology%20session."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block my-[12px] group"
+                    title="Direct WhatsApp chat: +971 58 563 6156 (00971-585636156)"
+                  >
+                    <span className="block text-[#F2EFEB] text-[11px] leading-tight transition-colors duration-200 group-hover:text-[#CDA66F]">
+                      WhatsApp (UAE)
+                    </span>
+                    <span className="block text-[#CDA66F] text-[11px] font-medium whitespace-nowrap mt-0.5 tracking-wide">
+                      +971 58 563 6156
+                    </span>
+                  </a>
+                );
+              }
+              if (link.includes('WhatsApp (India)')) {
+                return (
+                  <a
+                    key={link}
+                    href="https://wa.me/919810789604?text=Hello%20Namrattaa%2C%20I%20would%20like%20to%20inquire%20about%20a%20numerology%20session."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block my-[12px] group"
+                    title="Direct WhatsApp chat: +91 98107 89604 (0091-9810789604)"
+                  >
+                    <span className="block text-[#F2EFEB] text-[11px] leading-tight transition-colors duration-200 group-hover:text-[#CDA66F]">
+                      WhatsApp (India)
+                    </span>
+                    <span className="block text-[#CDA66F] text-[11px] font-medium whitespace-nowrap mt-0.5 tracking-wide">
+                      +91 98107 89604
+                    </span>
+                  </a>
+                );
+              }
+              if (link.includes('WhatsApp')) {
                 return (
                   <a
                     key={link}
